@@ -5,7 +5,7 @@ class Node:
 class DLL:
     def __init__(self):
         self.current_position = None
-        self.size
+        self.size = 0
 
     def __len__(self):
         pass
