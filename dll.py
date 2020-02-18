@@ -34,5 +34,5 @@ class DLL:
     def reverse(self):
         pass
 
-    def sort():
+    def sort(self):
         pass
