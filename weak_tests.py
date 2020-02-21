@@ -156,12 +156,13 @@ def main():
     print(str(dll) + "   -   current value: " + str(dll.get_value()) + "   -   size: " + str(len(dll)))
     dll.remove()
     print(str(dll) + "   -   current value: " + str(dll.get_value()) + "   -   size: " + str(len(dll)))
-
+    
     sys.stdout = orig_stdout
     fout.close()
-
+    print("done")
 
 if __name__ == "__main__":
+    
     main()
 
 
