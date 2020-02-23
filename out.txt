@@ -1,75 +1,2146 @@
-
-
-TESTING THE BASIC STUFF
-
    -   current value: None   -   size: 0
-A    -   current value: A   -   size: 1
-B A    -   current value: B   -   size: 2
-C B A    -   current value: C   -   size: 3
-D C B A    -   current value: D   -   size: 4
-E D C B A    -   current value: E   -   size: 5
-E D C B A    -   current value: D   -   size: 5
-E D C B A    -   current value: C   -   size: 5
-E D 1 C B A    -   current value: 1   -   size: 6
-E D 2 1 C B A    -   current value: 2   -   size: 7
-E D 2 1 C B A    -   current value: 1   -   size: 7
-E D 2 3 1 C B A    -   current value: 3   -   size: 8
-E D 2 4 3 1 C B A    -   current value: 4   -   size: 9
-E D 2 4 3 1 C B A    -   current value: 2   -   size: 9
-E D VALUE 2 4 3 1 C B A    -   current value: VALUE   -   size: 10
-E D VALUE 2 4 3 1 C B A    -   current value: B   -   size: 10
-E D VALUE 2 4 3 1 C A    -   current value: A   -   size: 9
-E D VALUE 2 4 3 1 C    -   current value: None   -   size: 8
-E D VALUE 2 4 3 1 C    -   current value: None   -   size: 8
-E D VALUE 2 4 3 1 C    -   current value: VALUE   -   size: 8
-E D 2 4 3 1 C    -   current value: 2   -   size: 7
-E D 4 3 1 C    -   current value: 4   -   size: 6
-E D 3 1 C    -   current value: 3   -   size: 5
-E D 3 1 C    -   current value: D   -   size: 5
-E D 3 1 C    -   current value: E   -   size: 5
-E D 3 1 C    -   current value: E   -   size: 5
-E D 3 1 C    -   current value: E   -   size: 5
-E D 3 1 C    -   current value: E   -   size: 5
-E D 3 1 C    -   current value: E   -   size: 5
-D 3 1 C    -   current value: D   -   size: 4
-3 1 C    -   current value: 3   -   size: 3
-3 1 C    -   current value: 1   -   size: 3
-3 1 C    -   current value: C   -   size: 3
-3 1 C    -   current value: None   -   size: 3
-3 1 C    -   current value: None   -   size: 3
-3 1 C    -   current value: None   -   size: 3
-3 1 C    -   current value: None   -   size: 3
-3 1 C    -   current value: None   -   size: 3
-3 1 C    -   current value: 3   -   size: 3
-1 C    -   current value: 1   -   size: 2
-C    -   current value: C   -   size: 1
+move_to_prev
    -   current value: None   -   size: 0
+remove
    -   current value: None   -   size: 0
-
-
-TESTING MORE COMPLEX STUFF
-
+remove
    -   current value: None   -   size: 0
-A    -   current value: A   -   size: 1
-B1 A    -   current value: B1   -   size: 2
-C B1 A    -   current value: C   -   size: 3
-A C B1 A    -   current value: A   -   size: 4
-B2 A C B1 A    -   current value: B2   -   size: 5
-A B1 C A B2    -   current value: A   -   size: 5
-C A B1 C A B2    -   current value: C   -   size: 6
-A C A B1 C A B2    -   current value: A   -   size: 7
-B3 A C A B1 C A B2    -   current value: B3   -   size: 8
-C B3 A C A B1 C A B2    -   current value: C   -   size: 9
-B3 A A B1 A B2    -   current value: B3   -   size: 6
-A A A B1 B2 B3    -   current value: A   -   size: 6
-B1 B2 B3    -   current value: B1   -   size: 3
-B3 B2 B1    -   current value: B3   -   size: 3
-B3 B2 B1    -   current value: B3   -   size: 3
-B3 B2 B1    -   current value: B2   -   size: 3
-B3 B1    -   current value: B1   -   size: 2
-B3    -   current value: None   -   size: 1
-B3    -   current value: None   -   size: 1
-B3    -   current value: None   -   size: 1
-B3    -   current value: B3   -   size: 1
-B3    -   current value: B3   -   size: 1
+remove
    -   current value: None   -   size: 0
+remove
+   -   current value: None   -   size: 0
+remove
+   -   current value: None   -   size: 0
+remove
+   -   current value: None   -   size: 0
+remove
+   -   current value: None   -   size: 0
+remove
+   -   current value: None   -   size: 0
+remove
+   -   current value: None   -   size: 0
+remove
+   -   current value: None   -   size: 0
+insert 16
+16   -   current value: 16   -   size: 1
+insert 12
+12 16   -   current value: 12   -   size: 2
+insert 22
+22 12 16   -   current value: 22   -   size: 3
+insert 11
+11 22 12 16   -   current value: 11   -   size: 4
+insert 14
+14 11 22 12 16   -   current value: 14   -   size: 5
+insert 16
+16 14 11 22 12 16   -   current value: 16   -   size: 6
+insert 25
+25 16 14 11 22 12 16   -   current value: 25   -   size: 7
+insert 18
+18 25 16 14 11 22 12 16   -   current value: 18   -   size: 8
+insert 21
+21 18 25 16 14 11 22 12 16   -   current value: 21   -   size: 9
+insert 28
+28 21 18 25 16 14 11 22 12 16   -   current value: 28   -   size: 10
+insert 15
+15 28 21 18 25 16 14 11 22 12 16   -   current value: 15   -   size: 11
+insert 20
+20 15 28 21 18 25 16 14 11 22 12 16   -   current value: 20   -   size: 12
+move_to_prev
+20 15 28 21 18 25 16 14 11 22 12 16   -   current value: 20   -   size: 12
+move_to_prev
+20 15 28 21 18 25 16 14 11 22 12 16   -   current value: 20   -   size: 12
+move_to_prev
+20 15 28 21 18 25 16 14 11 22 12 16   -   current value: 20   -   size: 12
+move_to_prev
+20 15 28 21 18 25 16 14 11 22 12 16   -   current value: 20   -   size: 12
+move_to_pos 0
+20 15 28 21 18 25 16 14 11 22 12 16   -   current value: 20   -   size: 12
+insert 27
+27 20 15 28 21 18 25 16 14 11 22 12 16   -   current value: 27   -   size: 13
+insert 10
+10 27 20 15 28 21 18 25 16 14 11 22 12 16   -   current value: 10   -   size: 14
+insert 10
+10 10 27 20 15 28 21 18 25 16 14 11 22 12 16   -   current value: 10   -   size: 15
+insert 23
+23 10 10 27 20 15 28 21 18 25 16 14 11 22 12 16   -   current value: 23   -   size: 16
+insert 13
+13 23 10 10 27 20 15 28 21 18 25 16 14 11 22 12 16   -   current value: 13   -   size: 17
+insert 22
+22 13 23 10 10 27 20 15 28 21 18 25 16 14 11 22 12 16   -   current value: 22   -   size: 18
+insert 12
+12 22 13 23 10 10 27 20 15 28 21 18 25 16 14 11 22 12 16   -   current value: 12   -   size: 19
+insert 18
+18 12 22 13 23 10 10 27 20 15 28 21 18 25 16 14 11 22 12 16   -   current value: 18   -   size: 20
+insert 14
+14 18 12 22 13 23 10 10 27 20 15 28 21 18 25 16 14 11 22 12 16   -   current value: 14   -   size: 21
+insert 17
+17 14 18 12 22 13 23 10 10 27 20 15 28 21 18 25 16 14 11 22 12 16   -   current value: 17   -   size: 22
+remove
+14 18 12 22 13 23 10 10 27 20 15 28 21 18 25 16 14 11 22 12 16   -   current value: 14   -   size: 21
+remove
+18 12 22 13 23 10 10 27 20 15 28 21 18 25 16 14 11 22 12 16   -   current value: 18   -   size: 20
+remove
+12 22 13 23 10 10 27 20 15 28 21 18 25 16 14 11 22 12 16   -   current value: 12   -   size: 19
+move_to_pos 11
+12 22 13 23 10 10 27 20 15 28 21 18 25 16 14 11 22 12 16   -   current value: 18   -   size: 19
+move_to_next
+12 22 13 23 10 10 27 20 15 28 21 18 25 16 14 11 22 12 16   -   current value: 25   -   size: 19
+move_to_next
+12 22 13 23 10 10 27 20 15 28 21 18 25 16 14 11 22 12 16   -   current value: 16   -   size: 19
+move_to_next
+12 22 13 23 10 10 27 20 15 28 21 18 25 16 14 11 22 12 16   -   current value: 14   -   size: 19
+move_to_next
+12 22 13 23 10 10 27 20 15 28 21 18 25 16 14 11 22 12 16   -   current value: 11   -   size: 19
+move_to_pos -2
+12 22 13 23 10 10 27 20 15 28 21 18 25 16 14 11 22 12 16   -   current value: 11   -   size: 19
+move_to_pos 18
+12 22 13 23 10 10 27 20 15 28 21 18 25 16 14 11 22 12 16   -   current value: 16   -   size: 19
+move_to_prev
+12 22 13 23 10 10 27 20 15 28 21 18 25 16 14 11 22 12 16   -   current value: 12   -   size: 19
+move_to_prev
+12 22 13 23 10 10 27 20 15 28 21 18 25 16 14 11 22 12 16   -   current value: 22   -   size: 19
+move_to_prev
+12 22 13 23 10 10 27 20 15 28 21 18 25 16 14 11 22 12 16   -   current value: 11   -   size: 19
+move_to_prev
+12 22 13 23 10 10 27 20 15 28 21 18 25 16 14 11 22 12 16   -   current value: 14   -   size: 19
+move_to_prev
+12 22 13 23 10 10 27 20 15 28 21 18 25 16 14 11 22 12 16   -   current value: 16   -   size: 19
+move_to_prev
+12 22 13 23 10 10 27 20 15 28 21 18 25 16 14 11 22 12 16   -   current value: 25   -   size: 19
+insert 29
+12 22 13 23 10 10 27 20 15 28 21 18 29 25 16 14 11 22 12 16   -   current value: 29   -   size: 20
+move_to_prev
+12 22 13 23 10 10 27 20 15 28 21 18 29 25 16 14 11 22 12 16   -   current value: 18   -   size: 20
+move_to_prev
+12 22 13 23 10 10 27 20 15 28 21 18 29 25 16 14 11 22 12 16   -   current value: 21   -   size: 20
+move_to_prev
+12 22 13 23 10 10 27 20 15 28 21 18 29 25 16 14 11 22 12 16   -   current value: 28   -   size: 20
+move_to_prev
+12 22 13 23 10 10 27 20 15 28 21 18 29 25 16 14 11 22 12 16   -   current value: 15   -   size: 20
+move_to_prev
+12 22 13 23 10 10 27 20 15 28 21 18 29 25 16 14 11 22 12 16   -   current value: 20   -   size: 20
+move_to_prev
+12 22 13 23 10 10 27 20 15 28 21 18 29 25 16 14 11 22 12 16   -   current value: 27   -   size: 20
+move_to_prev
+12 22 13 23 10 10 27 20 15 28 21 18 29 25 16 14 11 22 12 16   -   current value: 10   -   size: 20
+move_to_prev
+12 22 13 23 10 10 27 20 15 28 21 18 29 25 16 14 11 22 12 16   -   current value: 10   -   size: 20
+move_to_prev
+12 22 13 23 10 10 27 20 15 28 21 18 29 25 16 14 11 22 12 16   -   current value: 23   -   size: 20
+remove
+12 22 13 10 10 27 20 15 28 21 18 29 25 16 14 11 22 12 16   -   current value: 10   -   size: 19
+remove
+12 22 13 10 27 20 15 28 21 18 29 25 16 14 11 22 12 16   -   current value: 10   -   size: 18
+remove
+12 22 13 27 20 15 28 21 18 29 25 16 14 11 22 12 16   -   current value: 27   -   size: 17
+remove
+12 22 13 20 15 28 21 18 29 25 16 14 11 22 12 16   -   current value: 20   -   size: 16
+remove
+12 22 13 15 28 21 18 29 25 16 14 11 22 12 16   -   current value: 15   -   size: 15
+remove
+12 22 13 28 21 18 29 25 16 14 11 22 12 16   -   current value: 28   -   size: 14
+remove
+12 22 13 21 18 29 25 16 14 11 22 12 16   -   current value: 21   -   size: 13
+remove
+12 22 13 18 29 25 16 14 11 22 12 16   -   current value: 18   -   size: 12
+remove
+12 22 13 29 25 16 14 11 22 12 16   -   current value: 29   -   size: 11
+remove
+12 22 13 25 16 14 11 22 12 16   -   current value: 25   -   size: 10
+remove
+12 22 13 16 14 11 22 12 16   -   current value: 16   -   size: 9
+remove
+12 22 13 14 11 22 12 16   -   current value: 14   -   size: 8
+remove
+12 22 13 11 22 12 16   -   current value: 11   -   size: 7
+remove
+12 22 13 22 12 16   -   current value: 22   -   size: 6
+remove
+12 22 13 12 16   -   current value: 12   -   size: 5
+insert 11
+12 22 13 11 12 16   -   current value: 11   -   size: 6
+insert 26
+12 22 13 26 11 12 16   -   current value: 26   -   size: 7
+insert 22
+12 22 13 22 26 11 12 16   -   current value: 22   -   size: 8
+insert 24
+12 22 13 24 22 26 11 12 16   -   current value: 24   -   size: 9
+insert 13
+12 22 13 13 24 22 26 11 12 16   -   current value: 13   -   size: 10
+insert 11
+12 22 13 11 13 24 22 26 11 12 16   -   current value: 11   -   size: 11
+insert 12
+12 22 13 12 11 13 24 22 26 11 12 16   -   current value: 12   -   size: 12
+remove
+12 22 13 11 13 24 22 26 11 12 16   -   current value: 11   -   size: 11
+remove
+12 22 13 13 24 22 26 11 12 16   -   current value: 13   -   size: 10
+insert 16
+12 22 13 16 13 24 22 26 11 12 16   -   current value: 16   -   size: 11
+insert 16
+12 22 13 16 16 13 24 22 26 11 12 16   -   current value: 16   -   size: 12
+insert 22
+12 22 13 22 16 16 13 24 22 26 11 12 16   -   current value: 22   -   size: 13
+insert 13
+12 22 13 13 22 16 16 13 24 22 26 11 12 16   -   current value: 13   -   size: 14
+insert 23
+12 22 13 23 13 22 16 16 13 24 22 26 11 12 16   -   current value: 23   -   size: 15
+insert 24
+12 22 13 24 23 13 22 16 16 13 24 22 26 11 12 16   -   current value: 24   -   size: 16
+remove
+12 22 13 23 13 22 16 16 13 24 22 26 11 12 16   -   current value: 23   -   size: 15
+remove
+12 22 13 13 22 16 16 13 24 22 26 11 12 16   -   current value: 13   -   size: 14
+remove
+12 22 13 22 16 16 13 24 22 26 11 12 16   -   current value: 22   -   size: 13
+remove
+12 22 13 16 16 13 24 22 26 11 12 16   -   current value: 16   -   size: 12
+remove
+12 22 13 16 13 24 22 26 11 12 16   -   current value: 16   -   size: 11
+remove
+12 22 13 13 24 22 26 11 12 16   -   current value: 13   -   size: 10
+move_to_prev
+12 22 13 13 24 22 26 11 12 16   -   current value: 13   -   size: 10
+move_to_pos 6
+12 22 13 13 24 22 26 11 12 16   -   current value: 26   -   size: 10
+move_to_pos 6
+12 22 13 13 24 22 26 11 12 16   -   current value: 26   -   size: 10
+remove
+12 22 13 13 24 22 11 12 16   -   current value: 11   -   size: 9
+remove
+12 22 13 13 24 22 12 16   -   current value: 12   -   size: 8
+remove
+12 22 13 13 24 22 16   -   current value: 16   -   size: 7
+remove
+12 22 13 13 24 22   -   current value: None   -   size: 6
+remove
+12 22 13 13 24 22   -   current value: None   -   size: 6
+remove
+12 22 13 13 24 22   -   current value: None   -   size: 6
+remove
+12 22 13 13 24 22   -   current value: None   -   size: 6
+remove
+12 22 13 13 24 22   -   current value: None   -   size: 6
+remove
+12 22 13 13 24 22   -   current value: None   -   size: 6
+remove
+12 22 13 13 24 22   -   current value: None   -   size: 6
+remove
+12 22 13 13 24 22   -   current value: None   -   size: 6
+remove
+12 22 13 13 24 22   -   current value: None   -   size: 6
+remove
+12 22 13 13 24 22   -   current value: None   -   size: 6
+remove
+12 22 13 13 24 22   -   current value: None   -   size: 6
+remove
+12 22 13 13 24 22   -   current value: None   -   size: 6
+remove
+12 22 13 13 24 22   -   current value: None   -   size: 6
+remove
+12 22 13 13 24 22   -   current value: None   -   size: 6
+remove
+12 22 13 13 24 22   -   current value: None   -   size: 6
+remove
+12 22 13 13 24 22   -   current value: None   -   size: 6
+remove
+12 22 13 13 24 22   -   current value: None   -   size: 6
+remove
+12 22 13 13 24 22   -   current value: None   -   size: 6
+move_to_next
+12 22 13 13 24 22   -   current value: 12   -   size: 6
+move_to_next
+12 22 13 13 24 22   -   current value: 22   -   size: 6
+insert 19
+12 19 22 13 13 24 22   -   current value: 19   -   size: 7
+insert 29
+12 29 19 22 13 13 24 22   -   current value: 29   -   size: 8
+insert 23
+12 23 29 19 22 13 13 24 22   -   current value: 23   -   size: 9
+insert 15
+12 15 23 29 19 22 13 13 24 22   -   current value: 15   -   size: 10
+insert 19
+12 19 15 23 29 19 22 13 13 24 22   -   current value: 19   -   size: 11
+insert 10
+12 10 19 15 23 29 19 22 13 13 24 22   -   current value: 10   -   size: 12
+insert 22
+12 22 10 19 15 23 29 19 22 13 13 24 22   -   current value: 22   -   size: 13
+insert 13
+12 13 22 10 19 15 23 29 19 22 13 13 24 22   -   current value: 13   -   size: 14
+insert 12
+12 12 13 22 10 19 15 23 29 19 22 13 13 24 22   -   current value: 12   -   size: 15
+insert 29
+12 29 12 13 22 10 19 15 23 29 19 22 13 13 24 22   -   current value: 29   -   size: 16
+insert 13
+12 13 29 12 13 22 10 19 15 23 29 19 22 13 13 24 22   -   current value: 13   -   size: 17
+insert 14
+12 14 13 29 12 13 22 10 19 15 23 29 19 22 13 13 24 22   -   current value: 14   -   size: 18
+insert 27
+12 27 14 13 29 12 13 22 10 19 15 23 29 19 22 13 13 24 22   -   current value: 27   -   size: 19
+insert 26
+12 26 27 14 13 29 12 13 22 10 19 15 23 29 19 22 13 13 24 22   -   current value: 26   -   size: 20
+insert 11
+12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 19 22 13 13 24 22   -   current value: 11   -   size: 21
+insert 12
+12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 19 22 13 13 24 22   -   current value: 12   -   size: 22
+insert 12
+12 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 19 22 13 13 24 22   -   current value: 12   -   size: 23
+insert 19
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 19 22 13 13 24 22   -   current value: 19   -   size: 24
+move_to_pos 1
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 19 22 13 13 24 22   -   current value: 22   -   size: 24
+move_to_prev
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 19 22 13 13 24 22   -   current value: 19   -   size: 24
+move_to_prev
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 19 22 13 13 24 22   -   current value: 19   -   size: 24
+move_to_prev
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 19 22 13 13 24 22   -   current value: 19   -   size: 24
+move_to_prev
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 19 22 13 13 24 22   -   current value: 19   -   size: 24
+move_to_prev
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 19 22 13 13 24 22   -   current value: 19   -   size: 24
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 19 22 13 13 24 22   -   current value: 22   -   size: 24
+move_to_pos 0
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 19 22 13 13 24 22   -   current value: 19   -   size: 24
+insert 11
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 11 19 22 13 13 24 22   -   current value: 11   -   size: 25
+insert 18
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 18 11 19 22 13 13 24 22   -   current value: 18   -   size: 26
+insert 22
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 22 18 11 19 22 13 13 24 22   -   current value: 22   -   size: 27
+insert 14
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 14 22 18 11 19 22 13 13 24 22   -   current value: 14   -   size: 28
+insert 20
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 20 14 22 18 11 19 22 13 13 24 22   -   current value: 20   -   size: 29
+insert 13
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 13 20 14 22 18 11 19 22 13 13 24 22   -   current value: 13   -   size: 30
+insert 10
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 13 20 14 22 18 11 19 22 13 13 24 22   -   current value: 10   -   size: 31
+insert 25
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 25 10 13 20 14 22 18 11 19 22 13 13 24 22   -   current value: 25   -   size: 32
+insert 17
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 17 25 10 13 20 14 22 18 11 19 22 13 13 24 22   -   current value: 17   -   size: 33
+insert 10
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 17 25 10 13 20 14 22 18 11 19 22 13 13 24 22   -   current value: 10   -   size: 34
+insert 27
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 27 10 17 25 10 13 20 14 22 18 11 19 22 13 13 24 22   -   current value: 27   -   size: 35
+insert 26
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 26 27 10 17 25 10 13 20 14 22 18 11 19 22 13 13 24 22   -   current value: 26   -   size: 36
+insert 10
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 17 25 10 13 20 14 22 18 11 19 22 13 13 24 22   -   current value: 10   -   size: 37
+move_to_prev
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 17 25 10 13 20 14 22 18 11 19 22 13 13 24 22   -   current value: 10   -   size: 37
+move_to_prev
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 17 25 10 13 20 14 22 18 11 19 22 13 13 24 22   -   current value: 10   -   size: 37
+move_to_prev
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 17 25 10 13 20 14 22 18 11 19 22 13 13 24 22   -   current value: 10   -   size: 37
+move_to_prev
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 17 25 10 13 20 14 22 18 11 19 22 13 13 24 22   -   current value: 10   -   size: 37
+move_to_prev
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 17 25 10 13 20 14 22 18 11 19 22 13 13 24 22   -   current value: 10   -   size: 37
+move_to_pos 6
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 17 25 10 13 20 14 22 18 11 19 22 13 13 24 22   -   current value: 10   -   size: 37
+move_to_prev
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 17 25 10 13 20 14 22 18 11 19 22 13 13 24 22   -   current value: 25   -   size: 37
+move_to_prev
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 17 25 10 13 20 14 22 18 11 19 22 13 13 24 22   -   current value: 17   -   size: 37
+move_to_prev
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 17 25 10 13 20 14 22 18 11 19 22 13 13 24 22   -   current value: 10   -   size: 37
+move_to_prev
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 17 25 10 13 20 14 22 18 11 19 22 13 13 24 22   -   current value: 27   -   size: 37
+move_to_prev
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 17 25 10 13 20 14 22 18 11 19 22 13 13 24 22   -   current value: 26   -   size: 37
+move_to_prev
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 17 25 10 13 20 14 22 18 11 19 22 13 13 24 22   -   current value: 10   -   size: 37
+move_to_prev
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 17 25 10 13 20 14 22 18 11 19 22 13 13 24 22   -   current value: 10   -   size: 37
+move_to_pos 4
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 17 25 10 13 20 14 22 18 11 19 22 13 13 24 22   -   current value: 17   -   size: 37
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 25 10 13 20 14 22 18 11 19 22 13 13 24 22   -   current value: 25   -   size: 36
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 11 19 22 13 13 24 22   -   current value: 10   -   size: 35
+move_to_prev
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 11 19 22 13 13 24 22   -   current value: 10   -   size: 35
+move_to_prev
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 11 19 22 13 13 24 22   -   current value: 27   -   size: 35
+move_to_prev
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 11 19 22 13 13 24 22   -   current value: 26   -   size: 35
+move_to_prev
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 11 19 22 13 13 24 22   -   current value: 10   -   size: 35
+move_to_prev
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 11 19 22 13 13 24 22   -   current value: 10   -   size: 35
+move_to_prev
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 11 19 22 13 13 24 22   -   current value: 10   -   size: 35
+move_to_pos 13
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 11 19 22 13 13 24 22   -   current value: 13   -   size: 35
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 11 19 22 13 24 22   -   current value: 13   -   size: 34
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 11 19 22 24 22   -   current value: 24   -   size: 33
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 11 19 22 22   -   current value: 22   -   size: 32
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 11 19 22   -   current value: None   -   size: 31
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 11 19 22   -   current value: None   -   size: 31
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 11 19 22   -   current value: None   -   size: 31
+move_to_pos 3
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 11 19 22   -   current value: 10   -   size: 31
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 11 19 22   -   current value: 10   -   size: 31
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 11 19 22   -   current value: 13   -   size: 31
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 11 19 22   -   current value: 20   -   size: 31
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 11 19 22   -   current value: 14   -   size: 31
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 11 19 22   -   current value: 22   -   size: 31
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 11 19 22   -   current value: 18   -   size: 31
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 11 19 22   -   current value: 11   -   size: 31
+insert 24
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 24 11 19 22   -   current value: 24   -   size: 32
+insert 28
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 28 24 11 19 22   -   current value: 28   -   size: 33
+insert 19
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 19 28 24 11 19 22   -   current value: 19   -   size: 34
+insert 19
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 19 19 28 24 11 19 22   -   current value: 19   -   size: 35
+insert 21
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 21 19 19 28 24 11 19 22   -   current value: 21   -   size: 36
+insert 16
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 16 21 19 19 28 24 11 19 22   -   current value: 16   -   size: 37
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 16 21 19 19 28 24 11 19 22   -   current value: 21   -   size: 37
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 16 21 19 19 28 24 11 19 22   -   current value: 19   -   size: 37
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 16 21 19 19 28 24 11 19 22   -   current value: 19   -   size: 37
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 16 21 19 19 28 24 11 19 22   -   current value: 28   -   size: 37
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 16 21 19 19 28 24 11 19 22   -   current value: 24   -   size: 37
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 16 21 19 19 28 24 11 19 22   -   current value: 11   -   size: 37
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 16 21 19 19 28 24 11 19 22   -   current value: 19   -   size: 37
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 16 21 19 19 28 24 11 19 22   -   current value: 22   -   size: 37
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 16 21 19 19 28 24 11 19 22   -   current value: None   -   size: 37
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 16 21 19 19 28 24 11 19 22   -   current value: None   -   size: 37
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 16 21 19 19 28 24 11 19 22   -   current value: None   -   size: 37
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 16 21 19 19 28 24 11 19 22   -   current value: None   -   size: 37
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 16 21 19 19 28 24 11 19 22   -   current value: None   -   size: 37
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 16 21 19 19 28 24 11 19 22   -   current value: None   -   size: 37
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 16 21 19 19 28 24 11 19 22   -   current value: None   -   size: 37
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 16 21 19 19 28 24 11 19 22   -   current value: None   -   size: 37
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 16 21 19 19 28 24 11 19 22   -   current value: None   -   size: 37
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 16 21 19 19 28 24 11 19 22   -   current value: None   -   size: 37
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 16 21 19 19 28 24 11 19 22   -   current value: None   -   size: 37
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 16 21 19 19 28 24 11 19 22   -   current value: None   -   size: 37
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 16 21 19 19 28 24 11 19 22   -   current value: None   -   size: 37
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 16 21 19 19 28 24 11 19 22   -   current value: None   -   size: 37
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 16 21 19 19 28 24 11 19 22   -   current value: None   -   size: 37
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 16 21 19 19 28 24 11 19 22   -   current value: None   -   size: 37
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 16 21 19 19 28 24 11 19 22   -   current value: None   -   size: 37
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 16 21 19 19 28 24 11 19 22   -   current value: None   -   size: 37
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 16 21 19 19 28 24 11 19 22   -   current value: None   -   size: 37
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 16 21 19 19 28 24 11 19 22   -   current value: 12   -   size: 37
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 16 21 19 19 28 24 11 19 22   -   current value: 19   -   size: 37
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 16 21 19 19 28 24 11 19 22   -   current value: 12   -   size: 37
+move_to_pos 7
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 16 21 19 19 28 24 11 19 22   -   current value: 14   -   size: 37
+move_to_pos -1
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 16 21 19 19 28 24 11 19 22   -   current value: 14   -   size: 37
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 22 18 16 21 19 19 28 24 11 19 22   -   current value: 22   -   size: 37
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 18 16 21 19 19 28 24 11 19 22   -   current value: 18   -   size: 36
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 16 21 19 19 28 24 11 19 22   -   current value: 16   -   size: 35
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 21 19 19 28 24 11 19 22   -   current value: 21   -   size: 34
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 19 19 28 24 11 19 22   -   current value: 19   -   size: 33
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 19 28 24 11 19 22   -   current value: 19   -   size: 32
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 28 24 11 19 22   -   current value: 28   -   size: 31
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 24 11 19 22   -   current value: 24   -   size: 30
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 11 19 22   -   current value: 11   -   size: 29
+move_to_prev
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 14 11 19 22   -   current value: 14   -   size: 29
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 11 19 22   -   current value: 11   -   size: 28
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 19 22   -   current value: 19   -   size: 27
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 19 22   -   current value: 22   -   size: 27
+move_to_prev
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 19 22   -   current value: 19   -   size: 27
+move_to_pos -1
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 19 22   -   current value: 19   -   size: 27
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 19 22   -   current value: 22   -   size: 27
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 19   -   current value: None   -   size: 26
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 19   -   current value: None   -   size: 26
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 19   -   current value: None   -   size: 26
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 19   -   current value: None   -   size: 26
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 19   -   current value: None   -   size: 26
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 19   -   current value: None   -   size: 26
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 19   -   current value: None   -   size: 26
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 19   -   current value: None   -   size: 26
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 19   -   current value: None   -   size: 26
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 19   -   current value: None   -   size: 26
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 19   -   current value: None   -   size: 26
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 19   -   current value: None   -   size: 26
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 19   -   current value: None   -   size: 26
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 19   -   current value: None   -   size: 26
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 19   -   current value: None   -   size: 26
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 19   -   current value: None   -   size: 26
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 19   -   current value: None   -   size: 26
+move_to_prev
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 19   -   current value: 19   -   size: 26
+insert 23
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 23 19   -   current value: 23   -   size: 27
+insert 21
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 21 23 19   -   current value: 21   -   size: 28
+insert 10
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 10 21 23 19   -   current value: 10   -   size: 29
+insert 19
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 19 10 21 23 19   -   current value: 19   -   size: 30
+insert 23
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 23 19 10 21 23 19   -   current value: 23   -   size: 31
+insert 23
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 23 23 19 10 21 23 19   -   current value: 23   -   size: 32
+insert 20
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 20 23 23 19 10 21 23 19   -   current value: 20   -   size: 33
+insert 12
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 12 20 23 23 19 10 21 23 19   -   current value: 12   -   size: 34
+insert 11
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 11 12 20 23 23 19 10 21 23 19   -   current value: 11   -   size: 35
+insert 20
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 20 11 12 20 23 23 19 10 21 23 19   -   current value: 20   -   size: 36
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 20 11 12 20 23 23 19 10 21 23 19   -   current value: 11   -   size: 36
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 20 11 12 20 23 23 19 10 21 23 19   -   current value: 12   -   size: 36
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 20 11 12 20 23 23 19 10 21 23 19   -   current value: 20   -   size: 36
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 20 11 12 20 23 23 19 10 21 23 19   -   current value: 23   -   size: 36
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 20 11 12 20 23 23 19 10 21 23 19   -   current value: 23   -   size: 36
+move_to_pos 2
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 20 11 12 20 23 23 19 10 21 23 19   -   current value: 27   -   size: 36
+insert 10
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 10 27 10 10 13 20 20 11 12 20 23 23 19 10 21 23 19   -   current value: 10   -   size: 37
+insert 28
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 28 10 27 10 10 13 20 20 11 12 20 23 23 19 10 21 23 19   -   current value: 28   -   size: 38
+insert 11
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 11 28 10 27 10 10 13 20 20 11 12 20 23 23 19 10 21 23 19   -   current value: 11   -   size: 39
+insert 13
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12 20 23 23 19 10 21 23 19   -   current value: 13   -   size: 40
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12 20 23 23 19 10 21 23 19   -   current value: 11   -   size: 40
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12 20 23 23 19 10 21 23 19   -   current value: 28   -   size: 40
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12 20 23 23 19 10 21 23 19   -   current value: 10   -   size: 40
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12 20 23 23 19 10 21 23 19   -   current value: 27   -   size: 40
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12 20 23 23 19 10 21 23 19   -   current value: 10   -   size: 40
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12 20 23 23 19 10 21 23 19   -   current value: 10   -   size: 40
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12 20 23 23 19 10 21 23 19   -   current value: 13   -   size: 40
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12 20 23 23 19 10 21 23 19   -   current value: 20   -   size: 40
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12 20 23 23 19 10 21 23 19   -   current value: 20   -   size: 40
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12 20 23 23 19 10 21 23 19   -   current value: 11   -   size: 40
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12 20 23 23 19 10 21 23 19   -   current value: 12   -   size: 40
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12 20 23 23 19 10 21 23 19   -   current value: 20   -   size: 40
+move_to_pos 11
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12 20 23 23 19 10 21 23 19   -   current value: 20   -   size: 40
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12 20 23 23 19 10 21 23 19   -   current value: 11   -   size: 40
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12 20 23 23 19 10 21 23 19   -   current value: 12   -   size: 40
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12 20 23 23 19 10 21 23 19   -   current value: 20   -   size: 40
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12 23 23 19 10 21 23 19   -   current value: 23   -   size: 39
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12 23 19 10 21 23 19   -   current value: 23   -   size: 38
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12 19 10 21 23 19   -   current value: 19   -   size: 37
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12 10 21 23 19   -   current value: 10   -   size: 36
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12 21 23 19   -   current value: 21   -   size: 35
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12 23 19   -   current value: 23   -   size: 34
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12 19   -   current value: 19   -   size: 33
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12   -   current value: None   -   size: 32
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12   -   current value: None   -   size: 32
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12   -   current value: None   -   size: 32
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12   -   current value: None   -   size: 32
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12   -   current value: None   -   size: 32
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12   -   current value: None   -   size: 32
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12   -   current value: None   -   size: 32
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12   -   current value: None   -   size: 32
+insert 16
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12 16   -   current value: 16   -   size: 33
+insert 18
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12 18 16   -   current value: 18   -   size: 34
+insert 16
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12 16 18 16   -   current value: 16   -   size: 35
+insert 24
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12 24 16 18 16   -   current value: 24   -   size: 36
+insert 20
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12 20 24 16 18 16   -   current value: 20   -   size: 37
+insert 10
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12 10 20 24 16 18 16   -   current value: 10   -   size: 38
+insert 11
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12 11 10 20 24 16 18 16   -   current value: 11   -   size: 39
+insert 20
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12 20 11 10 20 24 16 18 16   -   current value: 20   -   size: 40
+insert 19
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12 19 20 11 10 20 24 16 18 16   -   current value: 19   -   size: 41
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12 20 11 10 20 24 16 18 16   -   current value: 20   -   size: 40
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12 11 10 20 24 16 18 16   -   current value: 11   -   size: 39
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12 11 10 20 24 16 18 16   -   current value: 10   -   size: 39
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12 11 10 20 24 16 18 16   -   current value: 20   -   size: 39
+move_to_pos 3
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12 11 10 20 24 16 18 16   -   current value: 11   -   size: 39
+move_to_prev
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 11 28 10 27 10 10 13 20 20 11 12 11 10 20 24 16 18 16   -   current value: 13   -   size: 39
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 11 28 10 27 10 10 13 20 20 11 12 11 10 20 24 16 18 16   -   current value: 11   -   size: 38
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 28 10 27 10 10 13 20 20 11 12 11 10 20 24 16 18 16   -   current value: 28   -   size: 37
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 10 27 10 10 13 20 20 11 12 11 10 20 24 16 18 16   -   current value: 10   -   size: 36
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 27 10 10 13 20 20 11 12 11 10 20 24 16 18 16   -   current value: 27   -   size: 35
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 10 10 13 20 20 11 12 11 10 20 24 16 18 16   -   current value: 10   -   size: 34
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 10 13 20 20 11 12 11 10 20 24 16 18 16   -   current value: 10   -   size: 33
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 13 20 20 11 12 11 10 20 24 16 18 16   -   current value: 13   -   size: 32
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 20 20 11 12 11 10 20 24 16 18 16   -   current value: 20   -   size: 31
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 20 11 12 11 10 20 24 16 18 16   -   current value: 20   -   size: 30
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 11 12 11 10 20 24 16 18 16   -   current value: 11   -   size: 29
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 12 11 10 20 24 16 18 16   -   current value: 12   -   size: 28
+move_to_pos -2
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 12 11 10 20 24 16 18 16   -   current value: 12   -   size: 28
+move_to_pos -2
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 12 11 10 20 24 16 18 16   -   current value: 12   -   size: 28
+move_to_prev
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 12 11 10 20 24 16 18 16   -   current value: 26   -   size: 28
+insert 26
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 26 26 12 11 10 20 24 16 18 16   -   current value: 26   -   size: 29
+insert 10
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 10 26 26 12 11 10 20 24 16 18 16   -   current value: 10   -   size: 30
+insert 19
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 19 10 26 26 12 11 10 20 24 16 18 16   -   current value: 19   -   size: 31
+move_to_pos 4
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 19 10 26 26 12 11 10 20 24 16 18 16   -   current value: 26   -   size: 31
+insert 10
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 19 10 26 10 26 12 11 10 20 24 16 18 16   -   current value: 10   -   size: 32
+insert 27
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 19 10 26 27 10 26 12 11 10 20 24 16 18 16   -   current value: 27   -   size: 33
+insert 13
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 19 10 26 13 27 10 26 12 11 10 20 24 16 18 16   -   current value: 13   -   size: 34
+move_to_prev
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 19 10 26 13 27 10 26 12 11 10 20 24 16 18 16   -   current value: 26   -   size: 34
+move_to_prev
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 19 10 26 13 27 10 26 12 11 10 20 24 16 18 16   -   current value: 10   -   size: 34
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 19 10 26 13 27 10 26 12 11 10 20 24 16 18 16   -   current value: 26   -   size: 34
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 19 10 26 13 27 10 26 12 11 10 20 24 16 18 16   -   current value: 13   -   size: 34
+move_to_next
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 19 10 26 13 27 10 26 12 11 10 20 24 16 18 16   -   current value: 27   -   size: 34
+insert 29
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 19 10 26 13 29 27 10 26 12 11 10 20 24 16 18 16   -   current value: 29   -   size: 35
+insert 24
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 19 10 26 13 24 29 27 10 26 12 11 10 20 24 16 18 16   -   current value: 24   -   size: 36
+insert 18
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 19 10 26 13 18 24 29 27 10 26 12 11 10 20 24 16 18 16   -   current value: 18   -   size: 37
+insert 15
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 19 10 26 13 15 18 24 29 27 10 26 12 11 10 20 24 16 18 16   -   current value: 15   -   size: 38
+insert 25
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 19 10 26 13 25 15 18 24 29 27 10 26 12 11 10 20 24 16 18 16   -   current value: 25   -   size: 39
+insert 20
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 19 10 26 13 20 25 15 18 24 29 27 10 26 12 11 10 20 24 16 18 16   -   current value: 20   -   size: 40
+insert 28
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 19 10 26 13 28 20 25 15 18 24 29 27 10 26 12 11 10 20 24 16 18 16   -   current value: 28   -   size: 41
+insert 19
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 19 10 26 13 19 28 20 25 15 18 24 29 27 10 26 12 11 10 20 24 16 18 16   -   current value: 19   -   size: 42
+insert 28
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 19 10 26 13 28 19 28 20 25 15 18 24 29 27 10 26 12 11 10 20 24 16 18 16   -   current value: 28   -   size: 43
+insert 28
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 19 10 26 13 28 28 19 28 20 25 15 18 24 29 27 10 26 12 11 10 20 24 16 18 16   -   current value: 28   -   size: 44
+remove
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 19 10 26 13 28 19 28 20 25 15 18 24 29 27 10 26 12 11 10 20 24 16 18 16   -   current value: 28   -   size: 43
+insert 22
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 19 10 26 13 22 28 19 28 20 25 15 18 24 29 27 10 26 12 11 10 20 24 16 18 16   -   current value: 22   -   size: 44
+insert 26
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 19 10 26 13 26 22 28 19 28 20 25 15 18 24 29 27 10 26 12 11 10 20 24 16 18 16   -   current value: 26   -   size: 45
+insert 11
+12 19 12 12 11 26 27 14 13 29 12 13 22 10 19 15 23 29 10 19 10 26 13 11 26 22 28 19 28 20 25 15 18 24 29 27 10 26 12 11 10 20 24 16 18 16   -   current value: 11   -   size: 46
+   -   current value: None   -   size: 0
+move_to_pos 0
+   -   current value: None   -   size: 0
+move_to_pos 0
+   -   current value: None   -   size: 0
+remove
+   -   current value: None   -   size: 0
+remove
+   -   current value: None   -   size: 0
+remove
+   -   current value: None   -   size: 0
+remove
+   -   current value: None   -   size: 0
+remove
+   -   current value: None   -   size: 0
+remove
+   -   current value: None   -   size: 0
+remove
+   -   current value: None   -   size: 0
+remove
+   -   current value: None   -   size: 0
+remove
+   -   current value: None   -   size: 0
+remove
+   -   current value: None   -   size: 0
+remove
+   -   current value: None   -   size: 0
+move_to_prev
+   -   current value: None   -   size: 0
+move_to_pos 0
+   -   current value: None   -   size: 0
+insert 21
+21   -   current value: 21   -   size: 1
+insert 14
+14 21   -   current value: 14   -   size: 2
+insert 22
+22 14 21   -   current value: 22   -   size: 3
+insert 15
+15 22 14 21   -   current value: 15   -   size: 4
+insert 21
+21 15 22 14 21   -   current value: 21   -   size: 5
+insert 21
+21 21 15 22 14 21   -   current value: 21   -   size: 6
+insert 18
+18 21 21 15 22 14 21   -   current value: 18   -   size: 7
+insert 27
+27 18 21 21 15 22 14 21   -   current value: 27   -   size: 8
+insert 26
+26 27 18 21 21 15 22 14 21   -   current value: 26   -   size: 9
+move_to_pos -1
+26 27 18 21 21 15 22 14 21   -   current value: 26   -   size: 9
+move_to_next
+26 27 18 21 21 15 22 14 21   -   current value: 27   -   size: 9
+move_to_next
+26 27 18 21 21 15 22 14 21   -   current value: 18   -   size: 9
+remove
+26 27 21 21 15 22 14 21   -   current value: 21   -   size: 8
+remove
+26 27 21 15 22 14 21   -   current value: 21   -   size: 7
+remove
+26 27 15 22 14 21   -   current value: 15   -   size: 6
+remove
+26 27 22 14 21   -   current value: 22   -   size: 5
+remove
+26 27 14 21   -   current value: 14   -   size: 4
+move_to_pos 1
+26 27 14 21   -   current value: 27   -   size: 4
+move_to_pos 2
+26 27 14 21   -   current value: 14   -   size: 4
+move_to_pos -1
+26 27 14 21   -   current value: 14   -   size: 4
+move_to_pos 4
+26 27 14 21   -   current value: 14   -   size: 4
+remove
+26 27 21   -   current value: 21   -   size: 3
+remove
+26 27   -   current value: None   -   size: 2
+move_to_prev
+26 27   -   current value: 27   -   size: 2
+move_to_prev
+26 27   -   current value: 26   -   size: 2
+move_to_next
+26 27   -   current value: 27   -   size: 2
+move_to_next
+26 27   -   current value: None   -   size: 2
+move_to_pos -1
+26 27   -   current value: None   -   size: 2
+move_to_pos 2
+26 27   -   current value: None   -   size: 2
+move_to_next
+26 27   -   current value: None   -   size: 2
+move_to_prev
+26 27   -   current value: 27   -   size: 2
+move_to_next
+26 27   -   current value: None   -   size: 2
+remove
+26 27   -   current value: None   -   size: 2
+remove
+26 27   -   current value: None   -   size: 2
+remove
+26 27   -   current value: None   -   size: 2
+remove
+26 27   -   current value: None   -   size: 2
+remove
+26 27   -   current value: None   -   size: 2
+insert 23
+26 27 23   -   current value: 23   -   size: 3
+insert 20
+26 27 20 23   -   current value: 20   -   size: 4
+move_to_prev
+26 27 20 23   -   current value: 27   -   size: 4
+move_to_next
+26 27 20 23   -   current value: 20   -   size: 4
+remove
+26 27 23   -   current value: 23   -   size: 3
+remove
+26 27   -   current value: None   -   size: 2
+remove
+26 27   -   current value: None   -   size: 2
+remove
+26 27   -   current value: None   -   size: 2
+remove
+26 27   -   current value: None   -   size: 2
+remove
+26 27   -   current value: None   -   size: 2
+remove
+26 27   -   current value: None   -   size: 2
+insert 29
+26 27 29   -   current value: 29   -   size: 3
+insert 20
+26 27 20 29   -   current value: 20   -   size: 4
+insert 13
+26 27 13 20 29   -   current value: 13   -   size: 5
+insert 13
+26 27 13 13 20 29   -   current value: 13   -   size: 6
+insert 27
+26 27 27 13 13 20 29   -   current value: 27   -   size: 7
+insert 17
+26 27 17 27 13 13 20 29   -   current value: 17   -   size: 8
+remove
+26 27 27 13 13 20 29   -   current value: 27   -   size: 7
+remove
+26 27 13 13 20 29   -   current value: 13   -   size: 6
+remove
+26 27 13 20 29   -   current value: 13   -   size: 5
+remove
+26 27 20 29   -   current value: 20   -   size: 4
+remove
+26 27 29   -   current value: 29   -   size: 3
+remove
+26 27   -   current value: None   -   size: 2
+remove
+26 27   -   current value: None   -   size: 2
+remove
+26 27   -   current value: None   -   size: 2
+move_to_pos 0
+26 27   -   current value: 27   -   size: 2
+move_to_prev
+26 27   -   current value: 27   -   size: 2
+move_to_pos -1
+26 27   -   current value: 27   -   size: 2
+move_to_pos -1
+26 27   -   current value: 27   -   size: 2
+insert 25
+26 25 27   -   current value: 25   -   size: 3
+insert 15
+26 15 25 27   -   current value: 15   -   size: 4
+insert 10
+26 10 15 25 27   -   current value: 10   -   size: 5
+insert 25
+26 25 10 15 25 27   -   current value: 25   -   size: 6
+insert 11
+26 11 25 10 15 25 27   -   current value: 11   -   size: 7
+insert 14
+26 14 11 25 10 15 25 27   -   current value: 14   -   size: 8
+insert 18
+26 18 14 11 25 10 15 25 27   -   current value: 18   -   size: 9
+insert 22
+26 22 18 14 11 25 10 15 25 27   -   current value: 22   -   size: 10
+insert 17
+26 17 22 18 14 11 25 10 15 25 27   -   current value: 17   -   size: 11
+insert 17
+26 17 17 22 18 14 11 25 10 15 25 27   -   current value: 17   -   size: 12
+insert 22
+26 22 17 17 22 18 14 11 25 10 15 25 27   -   current value: 22   -   size: 13
+insert 13
+26 13 22 17 17 22 18 14 11 25 10 15 25 27   -   current value: 13   -   size: 14
+insert 29
+26 29 13 22 17 17 22 18 14 11 25 10 15 25 27   -   current value: 29   -   size: 15
+insert 20
+26 20 29 13 22 17 17 22 18 14 11 25 10 15 25 27   -   current value: 20   -   size: 16
+insert 25
+26 25 20 29 13 22 17 17 22 18 14 11 25 10 15 25 27   -   current value: 25   -   size: 17
+insert 19
+26 19 25 20 29 13 22 17 17 22 18 14 11 25 10 15 25 27   -   current value: 19   -   size: 18
+insert 28
+26 28 19 25 20 29 13 22 17 17 22 18 14 11 25 10 15 25 27   -   current value: 28   -   size: 19
+insert 24
+26 24 28 19 25 20 29 13 22 17 17 22 18 14 11 25 10 15 25 27   -   current value: 24   -   size: 20
+insert 19
+26 19 24 28 19 25 20 29 13 22 17 17 22 18 14 11 25 10 15 25 27   -   current value: 19   -   size: 21
+insert 21
+26 21 19 24 28 19 25 20 29 13 22 17 17 22 18 14 11 25 10 15 25 27   -   current value: 21   -   size: 22
+remove
+26 19 24 28 19 25 20 29 13 22 17 17 22 18 14 11 25 10 15 25 27   -   current value: 19   -   size: 21
+remove
+26 24 28 19 25 20 29 13 22 17 17 22 18 14 11 25 10 15 25 27   -   current value: 24   -   size: 20
+remove
+26 28 19 25 20 29 13 22 17 17 22 18 14 11 25 10 15 25 27   -   current value: 28   -   size: 19
+remove
+26 19 25 20 29 13 22 17 17 22 18 14 11 25 10 15 25 27   -   current value: 19   -   size: 18
+remove
+26 25 20 29 13 22 17 17 22 18 14 11 25 10 15 25 27   -   current value: 25   -   size: 17
+remove
+26 20 29 13 22 17 17 22 18 14 11 25 10 15 25 27   -   current value: 20   -   size: 16
+remove
+26 29 13 22 17 17 22 18 14 11 25 10 15 25 27   -   current value: 29   -   size: 15
+remove
+26 13 22 17 17 22 18 14 11 25 10 15 25 27   -   current value: 13   -   size: 14
+remove
+26 22 17 17 22 18 14 11 25 10 15 25 27   -   current value: 22   -   size: 13
+move_to_next
+26 22 17 17 22 18 14 11 25 10 15 25 27   -   current value: 17   -   size: 13
+move_to_prev
+26 22 17 17 22 18 14 11 25 10 15 25 27   -   current value: 22   -   size: 13
+move_to_prev
+26 22 17 17 22 18 14 11 25 10 15 25 27   -   current value: 22   -   size: 13
+move_to_prev
+26 22 17 17 22 18 14 11 25 10 15 25 27   -   current value: 22   -   size: 13
+move_to_next
+26 22 17 17 22 18 14 11 25 10 15 25 27   -   current value: 17   -   size: 13
+move_to_next
+26 22 17 17 22 18 14 11 25 10 15 25 27   -   current value: 17   -   size: 13
+move_to_prev
+26 22 17 17 22 18 14 11 25 10 15 25 27   -   current value: 17   -   size: 13
+move_to_prev
+26 22 17 17 22 18 14 11 25 10 15 25 27   -   current value: 22   -   size: 13
+move_to_prev
+26 22 17 17 22 18 14 11 25 10 15 25 27   -   current value: 22   -   size: 13
+remove
+26 17 17 22 18 14 11 25 10 15 25 27   -   current value: 17   -   size: 12
+remove
+26 17 22 18 14 11 25 10 15 25 27   -   current value: 17   -   size: 11
+remove
+26 22 18 14 11 25 10 15 25 27   -   current value: 22   -   size: 10
+remove
+26 18 14 11 25 10 15 25 27   -   current value: 18   -   size: 9
+remove
+26 14 11 25 10 15 25 27   -   current value: 14   -   size: 8
+remove
+26 11 25 10 15 25 27   -   current value: 11   -   size: 7
+move_to_prev
+26 11 25 10 15 25 27   -   current value: 11   -   size: 7
+move_to_prev
+26 11 25 10 15 25 27   -   current value: 11   -   size: 7
+move_to_prev
+26 11 25 10 15 25 27   -   current value: 11   -   size: 7
+remove
+26 25 10 15 25 27   -   current value: 25   -   size: 6
+remove
+26 10 15 25 27   -   current value: 10   -   size: 5
+move_to_next
+26 10 15 25 27   -   current value: 15   -   size: 5
+move_to_next
+26 10 15 25 27   -   current value: 25   -   size: 5
+move_to_prev
+26 10 15 25 27   -   current value: 15   -   size: 5
+move_to_prev
+26 10 15 25 27   -   current value: 10   -   size: 5
+move_to_pos -2
+26 10 15 25 27   -   current value: 10   -   size: 5
+insert 23
+26 23 10 15 25 27   -   current value: 23   -   size: 6
+insert 15
+26 15 23 10 15 25 27   -   current value: 15   -   size: 7
+insert 22
+26 22 15 23 10 15 25 27   -   current value: 22   -   size: 8
+insert 26
+26 26 22 15 23 10 15 25 27   -   current value: 26   -   size: 9
+insert 20
+26 20 26 22 15 23 10 15 25 27   -   current value: 20   -   size: 10
+insert 10
+26 10 20 26 22 15 23 10 15 25 27   -   current value: 10   -   size: 11
+remove
+26 20 26 22 15 23 10 15 25 27   -   current value: 20   -   size: 10
+remove
+26 26 22 15 23 10 15 25 27   -   current value: 26   -   size: 9
+remove
+26 22 15 23 10 15 25 27   -   current value: 22   -   size: 8
+remove
+26 15 23 10 15 25 27   -   current value: 15   -   size: 7
+remove
+26 23 10 15 25 27   -   current value: 23   -   size: 6
+remove
+26 10 15 25 27   -   current value: 10   -   size: 5
+remove
+26 15 25 27   -   current value: 15   -   size: 4
+remove
+26 25 27   -   current value: 25   -   size: 3
+remove
+26 27   -   current value: 27   -   size: 2
+remove
+26   -   current value: None   -   size: 1
+move_to_pos -2
+26   -   current value: None   -   size: 1
+move_to_pos -2
+26   -   current value: None   -   size: 1
+remove
+26   -   current value: None   -   size: 1
+move_to_prev
+26   -   current value: None   -   size: 1
+insert 25
+26 25   -   current value: 25   -   size: 2
+insert 20
+26 20 25   -   current value: 20   -   size: 3
+insert 12
+26 12 20 25   -   current value: 12   -   size: 4
+insert 18
+26 18 12 20 25   -   current value: 18   -   size: 5
+move_to_pos 0
+26 18 12 20 25   -   current value: 18   -   size: 5
+remove
+26 12 20 25   -   current value: 12   -   size: 4
+remove
+26 20 25   -   current value: 20   -   size: 3
+remove
+26 25   -   current value: 25   -   size: 2
+move_to_next
+26 25   -   current value: None   -   size: 2
+remove
+26 25   -   current value: None   -   size: 2
+remove
+26 25   -   current value: None   -   size: 2
+remove
+26 25   -   current value: None   -   size: 2
+remove
+26 25   -   current value: None   -   size: 2
+remove
+26 25   -   current value: None   -   size: 2
+remove
+26 25   -   current value: None   -   size: 2
+remove
+26 25   -   current value: None   -   size: 2
+move_to_next
+26 25   -   current value: 26   -   size: 2
+insert 12
+12 26 25   -   current value: 12   -   size: 3
+insert 13
+13 12 26 25   -   current value: 13   -   size: 4
+insert 15
+15 13 12 26 25   -   current value: 15   -   size: 5
+insert 19
+19 15 13 12 26 25   -   current value: 19   -   size: 6
+insert 12
+12 19 15 13 12 26 25   -   current value: 12   -   size: 7
+insert 16
+16 12 19 15 13 12 26 25   -   current value: 16   -   size: 8
+insert 11
+11 16 12 19 15 13 12 26 25   -   current value: 11   -   size: 9
+insert 21
+21 11 16 12 19 15 13 12 26 25   -   current value: 21   -   size: 10
+move_to_prev
+21 11 16 12 19 15 13 12 26 25   -   current value: None   -   size: 10
+move_to_pos 1
+21 11 16 12 19 15 13 12 26 25   -   current value: 21   -   size: 10
+move_to_next
+21 11 16 12 19 15 13 12 26 25   -   current value: 11   -   size: 10
+move_to_next
+21 11 16 12 19 15 13 12 26 25   -   current value: 16   -   size: 10
+move_to_prev
+21 11 16 12 19 15 13 12 26 25   -   current value: 11   -   size: 10
+move_to_prev
+21 11 16 12 19 15 13 12 26 25   -   current value: 21   -   size: 10
+move_to_prev
+21 11 16 12 19 15 13 12 26 25   -   current value: None   -   size: 10
+move_to_pos 0
+21 11 16 12 19 15 13 12 26 25   -   current value: None   -   size: 10
+insert 18
+21 11 16 12 19 15 13 12 26 25 18   -   current value: 18   -   size: 11
+insert 13
+21 11 16 12 19 15 13 12 26 25 13 18   -   current value: 13   -   size: 12
+insert 15
+21 11 16 12 19 15 13 12 26 25 15 13 18   -   current value: 15   -   size: 13
+insert 28
+21 11 16 12 19 15 13 12 26 25 28 15 13 18   -   current value: 28   -   size: 14
+insert 20
+21 11 16 12 19 15 13 12 26 25 20 28 15 13 18   -   current value: 20   -   size: 15
+move_to_prev
+21 11 16 12 19 15 13 12 26 25 20 28 15 13 18   -   current value: 20   -   size: 15
+move_to_prev
+21 11 16 12 19 15 13 12 26 25 20 28 15 13 18   -   current value: 20   -   size: 15
+move_to_prev
+21 11 16 12 19 15 13 12 26 25 20 28 15 13 18   -   current value: 20   -   size: 15
+move_to_prev
+21 11 16 12 19 15 13 12 26 25 20 28 15 13 18   -   current value: 20   -   size: 15
+move_to_prev
+21 11 16 12 19 15 13 12 26 25 20 28 15 13 18   -   current value: 20   -   size: 15
+move_to_pos 0
+21 11 16 12 19 15 13 12 26 25 20 28 15 13 18   -   current value: 20   -   size: 15
+move_to_pos -2
+21 11 16 12 19 15 13 12 26 25 20 28 15 13 18   -   current value: 20   -   size: 15
+insert 20
+21 11 16 12 19 15 13 12 26 25 20 20 28 15 13 18   -   current value: 20   -   size: 16
+insert 22
+21 11 16 12 19 15 13 12 26 25 22 20 20 28 15 13 18   -   current value: 22   -   size: 17
+insert 23
+21 11 16 12 19 15 13 12 26 25 23 22 20 20 28 15 13 18   -   current value: 23   -   size: 18
+insert 19
+21 11 16 12 19 15 13 12 26 25 19 23 22 20 20 28 15 13 18   -   current value: 19   -   size: 19
+insert 20
+21 11 16 12 19 15 13 12 26 25 20 19 23 22 20 20 28 15 13 18   -   current value: 20   -   size: 20
+insert 24
+21 11 16 12 19 15 13 12 26 25 24 20 19 23 22 20 20 28 15 13 18   -   current value: 24   -   size: 21
+insert 24
+21 11 16 12 19 15 13 12 26 25 24 24 20 19 23 22 20 20 28 15 13 18   -   current value: 24   -   size: 22
+remove
+21 11 16 12 19 15 13 12 26 25 24 20 19 23 22 20 20 28 15 13 18   -   current value: 24   -   size: 21
+remove
+21 11 16 12 19 15 13 12 26 25 20 19 23 22 20 20 28 15 13 18   -   current value: 20   -   size: 20
+remove
+21 11 16 12 19 15 13 12 26 25 19 23 22 20 20 28 15 13 18   -   current value: 19   -   size: 19
+remove
+21 11 16 12 19 15 13 12 26 25 23 22 20 20 28 15 13 18   -   current value: 23   -   size: 18
+remove
+21 11 16 12 19 15 13 12 26 25 22 20 20 28 15 13 18   -   current value: 22   -   size: 17
+remove
+21 11 16 12 19 15 13 12 26 25 20 20 28 15 13 18   -   current value: 20   -   size: 16
+remove
+21 11 16 12 19 15 13 12 26 25 20 28 15 13 18   -   current value: 20   -   size: 15
+remove
+21 11 16 12 19 15 13 12 26 25 28 15 13 18   -   current value: 28   -   size: 14
+remove
+21 11 16 12 19 15 13 12 26 25 15 13 18   -   current value: 15   -   size: 13
+remove
+21 11 16 12 19 15 13 12 26 25 13 18   -   current value: 13   -   size: 12
+remove
+21 11 16 12 19 15 13 12 26 25 18   -   current value: 18   -   size: 11
+remove
+21 11 16 12 19 15 13 12 26 25   -   current value: None   -   size: 10
+remove
+21 11 16 12 19 15 13 12 26 25   -   current value: None   -   size: 10
+remove
+21 11 16 12 19 15 13 12 26 25   -   current value: None   -   size: 10
+remove
+21 11 16 12 19 15 13 12 26 25   -   current value: None   -   size: 10
+remove
+21 11 16 12 19 15 13 12 26 25   -   current value: None   -   size: 10
+remove
+21 11 16 12 19 15 13 12 26 25   -   current value: None   -   size: 10
+remove
+21 11 16 12 19 15 13 12 26 25   -   current value: None   -   size: 10
+remove
+21 11 16 12 19 15 13 12 26 25   -   current value: None   -   size: 10
+remove
+21 11 16 12 19 15 13 12 26 25   -   current value: None   -   size: 10
+remove
+21 11 16 12 19 15 13 12 26 25   -   current value: None   -   size: 10
+remove
+21 11 16 12 19 15 13 12 26 25   -   current value: None   -   size: 10
+remove
+21 11 16 12 19 15 13 12 26 25   -   current value: None   -   size: 10
+remove
+21 11 16 12 19 15 13 12 26 25   -   current value: None   -   size: 10
+remove
+21 11 16 12 19 15 13 12 26 25   -   current value: None   -   size: 10
+remove
+21 11 16 12 19 15 13 12 26 25   -   current value: None   -   size: 10
+remove
+21 11 16 12 19 15 13 12 26 25   -   current value: None   -   size: 10
+remove
+21 11 16 12 19 15 13 12 26 25   -   current value: None   -   size: 10
+move_to_pos 1
+21 11 16 12 19 15 13 12 26 25   -   current value: 21   -   size: 10
+move_to_pos 1
+21 11 16 12 19 15 13 12 26 25   -   current value: 21   -   size: 10
+insert 23
+23 21 11 16 12 19 15 13 12 26 25   -   current value: 23   -   size: 11
+insert 12
+12 23 21 11 16 12 19 15 13 12 26 25   -   current value: 12   -   size: 12
+insert 26
+26 12 23 21 11 16 12 19 15 13 12 26 25   -   current value: 26   -   size: 13
+insert 24
+24 26 12 23 21 11 16 12 19 15 13 12 26 25   -   current value: 24   -   size: 14
+insert 25
+25 24 26 12 23 21 11 16 12 19 15 13 12 26 25   -   current value: 25   -   size: 15
+insert 22
+22 25 24 26 12 23 21 11 16 12 19 15 13 12 26 25   -   current value: 22   -   size: 16
+insert 28
+28 22 25 24 26 12 23 21 11 16 12 19 15 13 12 26 25   -   current value: 28   -   size: 17
+insert 22
+22 28 22 25 24 26 12 23 21 11 16 12 19 15 13 12 26 25   -   current value: 22   -   size: 18
+move_to_pos 8
+22 28 22 25 24 26 12 23 21 11 16 12 19 15 13 12 26 25   -   current value: 23   -   size: 18
+insert 15
+22 28 22 25 24 26 12 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 15   -   size: 19
+insert 26
+22 28 22 25 24 26 12 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 26   -   size: 20
+insert 21
+22 28 22 25 24 26 12 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 21   -   size: 21
+insert 14
+22 28 22 25 24 26 12 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 14   -   size: 22
+insert 16
+22 28 22 25 24 26 12 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 16   -   size: 23
+insert 13
+22 28 22 25 24 26 12 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 13   -   size: 24
+insert 27
+22 28 22 25 24 26 12 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 27   -   size: 25
+insert 22
+22 28 22 25 24 26 12 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 22   -   size: 26
+insert 28
+22 28 22 25 24 26 12 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 28   -   size: 27
+insert 16
+22 28 22 25 24 26 12 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 16   -   size: 28
+insert 15
+22 28 22 25 24 26 12 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 15   -   size: 29
+insert 19
+22 28 22 25 24 26 12 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 19   -   size: 30
+insert 27
+22 28 22 25 24 26 12 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 27   -   size: 31
+insert 18
+22 28 22 25 24 26 12 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 18   -   size: 32
+insert 20
+22 28 22 25 24 26 12 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 20   -   size: 33
+insert 23
+22 28 22 25 24 26 12 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 23   -   size: 34
+insert 25
+22 28 22 25 24 26 12 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 25   -   size: 35
+insert 27
+22 28 22 25 24 26 12 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 27   -   size: 36
+insert 13
+22 28 22 25 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 13   -   size: 37
+move_to_prev
+22 28 22 25 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 12   -   size: 37
+move_to_prev
+22 28 22 25 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 26   -   size: 37
+move_to_prev
+22 28 22 25 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 24   -   size: 37
+move_to_prev
+22 28 22 25 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 25   -   size: 37
+move_to_prev
+22 28 22 25 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 22   -   size: 37
+move_to_prev
+22 28 22 25 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 28   -   size: 37
+move_to_prev
+22 28 22 25 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 22   -   size: 37
+move_to_next
+22 28 22 25 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 28   -   size: 37
+move_to_next
+22 28 22 25 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 22   -   size: 37
+move_to_next
+22 28 22 25 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 25   -   size: 37
+move_to_next
+22 28 22 25 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 24   -   size: 37
+insert 26
+22 28 22 25 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 26   -   size: 38
+insert 16
+22 28 22 25 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 16   -   size: 39
+insert 13
+22 28 22 25 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 13   -   size: 40
+insert 22
+22 28 22 25 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 22   -   size: 41
+insert 14
+22 28 22 25 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 14   -   size: 42
+insert 26
+22 28 22 25 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 26   -   size: 43
+insert 22
+22 28 22 25 22 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 22   -   size: 44
+insert 10
+22 28 22 25 10 22 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 10   -   size: 45
+move_to_next
+22 28 22 25 10 22 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 22   -   size: 45
+move_to_next
+22 28 22 25 10 22 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 26   -   size: 45
+move_to_next
+22 28 22 25 10 22 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 14   -   size: 45
+move_to_next
+22 28 22 25 10 22 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 22   -   size: 45
+move_to_prev
+22 28 22 25 10 22 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 14   -   size: 45
+move_to_prev
+22 28 22 25 10 22 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 26   -   size: 45
+move_to_prev
+22 28 22 25 10 22 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 22   -   size: 45
+move_to_prev
+22 28 22 25 10 22 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 10   -   size: 45
+move_to_prev
+22 28 22 25 10 22 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 25   -   size: 45
+move_to_prev
+22 28 22 25 10 22 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 22   -   size: 45
+move_to_prev
+22 28 22 25 10 22 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 28   -   size: 45
+move_to_prev
+22 28 22 25 10 22 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 22   -   size: 45
+move_to_prev
+22 28 22 25 10 22 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: None   -   size: 45
+move_to_prev
+22 28 22 25 10 22 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: None   -   size: 45
+move_to_next
+22 28 22 25 10 22 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 22   -   size: 45
+move_to_next
+22 28 22 25 10 22 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 28   -   size: 45
+move_to_next
+22 28 22 25 10 22 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 22   -   size: 45
+move_to_next
+22 28 22 25 10 22 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 25   -   size: 45
+move_to_next
+22 28 22 25 10 22 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 10   -   size: 45
+move_to_next
+22 28 22 25 10 22 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 22   -   size: 45
+move_to_prev
+22 28 22 25 10 22 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 10   -   size: 45
+move_to_prev
+22 28 22 25 10 22 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 25   -   size: 45
+move_to_prev
+22 28 22 25 10 22 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 22   -   size: 45
+move_to_prev
+22 28 22 25 10 22 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 28   -   size: 45
+move_to_prev
+22 28 22 25 10 22 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: 22   -   size: 45
+move_to_prev
+22 28 22 25 10 22 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: None   -   size: 45
+move_to_prev
+22 28 22 25 10 22 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: None   -   size: 45
+move_to_prev
+22 28 22 25 10 22 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25   -   current value: None   -   size: 45
+insert 15
+22 28 22 25 10 22 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25 15   -   current value: 15   -   size: 46
+insert 13
+22 28 22 25 10 22 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25 13 15   -   current value: 13   -   size: 47
+insert 14
+22 28 22 25 10 22 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25 14 13 15   -   current value: 14   -   size: 48
+insert 22
+22 28 22 25 10 22 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25 22 14 13 15   -   current value: 22   -   size: 49
+insert 21
+22 28 22 25 10 22 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25 21 22 14 13 15   -   current value: 21   -   size: 50
+insert 15
+22 28 22 25 10 22 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25 15 21 22 14 13 15   -   current value: 15   -   size: 51
+insert 22
+22 28 22 25 10 22 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25 22 15 21 22 14 13 15   -   current value: 22   -   size: 52
+insert 21
+22 28 22 25 10 22 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25 21 22 15 21 22 14 13 15   -   current value: 21   -   size: 53
+insert 26
+22 28 22 25 10 22 26 14 22 13 16 26 24 26 12 13 27 25 23 20 18 27 19 15 16 28 22 27 13 16 14 21 26 15 23 21 11 16 12 19 15 13 12 26 25 26 21 22 15 21 22 14 13 15   -   current value: 26   -   size: 54
+   -   current value: None   -   size: 0
+move_to_prev
+   -   current value: None   -   size: 0
+insert 21
+21   -   current value: 21   -   size: 1
+insert 12
+12 21   -   current value: 12   -   size: 2
+insert 29
+29 12 21   -   current value: 29   -   size: 3
+insert 25
+25 29 12 21   -   current value: 25   -   size: 4
+insert 23
+23 25 29 12 21   -   current value: 23   -   size: 5
+insert 10
+10 23 25 29 12 21   -   current value: 10   -   size: 6
+insert 21
+21 10 23 25 29 12 21   -   current value: 21   -   size: 7
+insert 28
+28 21 10 23 25 29 12 21   -   current value: 28   -   size: 8
+insert 21
+21 28 21 10 23 25 29 12 21   -   current value: 21   -   size: 9
+insert 25
+25 21 28 21 10 23 25 29 12 21   -   current value: 25   -   size: 10
+insert 24
+24 25 21 28 21 10 23 25 29 12 21   -   current value: 24   -   size: 11
+insert 26
+26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 26   -   size: 12
+insert 16
+16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 16   -   size: 13
+insert 26
+26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 26   -   size: 14
+insert 11
+11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 11   -   size: 15
+insert 21
+21 11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 21   -   size: 16
+move_to_prev
+21 11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 21   -   size: 16
+move_to_prev
+21 11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 21   -   size: 16
+remove
+11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 11   -   size: 15
+move_to_prev
+11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 11   -   size: 15
+move_to_prev
+11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 11   -   size: 15
+move_to_prev
+11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 11   -   size: 15
+move_to_prev
+11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 11   -   size: 15
+move_to_prev
+11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 11   -   size: 15
+move_to_prev
+11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 11   -   size: 15
+move_to_prev
+11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 11   -   size: 15
+move_to_prev
+11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 11   -   size: 15
+move_to_prev
+11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 11   -   size: 15
+move_to_prev
+11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 11   -   size: 15
+move_to_prev
+11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 11   -   size: 15
+move_to_prev
+11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 11   -   size: 15
+insert 16
+16 11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 16   -   size: 16
+insert 21
+21 16 11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 21   -   size: 17
+insert 27
+27 21 16 11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 27   -   size: 18
+insert 26
+26 27 21 16 11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 26   -   size: 19
+insert 28
+28 26 27 21 16 11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 28   -   size: 20
+insert 22
+22 28 26 27 21 16 11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 22   -   size: 21
+insert 24
+24 22 28 26 27 21 16 11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 24   -   size: 22
+insert 17
+17 24 22 28 26 27 21 16 11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 17   -   size: 23
+insert 19
+19 17 24 22 28 26 27 21 16 11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 19   -   size: 24
+insert 28
+28 19 17 24 22 28 26 27 21 16 11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 28   -   size: 25
+insert 28
+28 28 19 17 24 22 28 26 27 21 16 11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 28   -   size: 26
+insert 28
+28 28 28 19 17 24 22 28 26 27 21 16 11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 28   -   size: 27
+insert 10
+10 28 28 28 19 17 24 22 28 26 27 21 16 11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 10   -   size: 28
+insert 19
+19 10 28 28 28 19 17 24 22 28 26 27 21 16 11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 19   -   size: 29
+move_to_next
+19 10 28 28 28 19 17 24 22 28 26 27 21 16 11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 10   -   size: 29
+move_to_next
+19 10 28 28 28 19 17 24 22 28 26 27 21 16 11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 28   -   size: 29
+move_to_next
+19 10 28 28 28 19 17 24 22 28 26 27 21 16 11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 28   -   size: 29
+move_to_next
+19 10 28 28 28 19 17 24 22 28 26 27 21 16 11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 28   -   size: 29
+move_to_next
+19 10 28 28 28 19 17 24 22 28 26 27 21 16 11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 19   -   size: 29
+move_to_next
+19 10 28 28 28 19 17 24 22 28 26 27 21 16 11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 17   -   size: 29
+move_to_next
+19 10 28 28 28 19 17 24 22 28 26 27 21 16 11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 24   -   size: 29
+move_to_next
+19 10 28 28 28 19 17 24 22 28 26 27 21 16 11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 22   -   size: 29
+move_to_next
+19 10 28 28 28 19 17 24 22 28 26 27 21 16 11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 28   -   size: 29
+insert 27
+19 10 28 28 28 19 17 24 22 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 27   -   size: 30
+insert 29
+19 10 28 28 28 19 17 24 22 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 29   -   size: 31
+insert 17
+19 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 17   -   size: 32
+move_to_pos 26
+19 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 10 23 25 29 12 21   -   current value: 10   -   size: 32
+insert 16
+19 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 16 10 23 25 29 12 21   -   current value: 16   -   size: 33
+insert 21
+19 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 21 16 10 23 25 29 12 21   -   current value: 21   -   size: 34
+insert 11
+19 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 11   -   size: 35
+move_to_pos 26
+19 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 11   -   size: 35
+move_to_next
+19 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 21   -   size: 35
+move_to_next
+19 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 16   -   size: 35
+move_to_next
+19 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 10   -   size: 35
+move_to_next
+19 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 23   -   size: 35
+move_to_next
+19 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 25   -   size: 35
+move_to_next
+19 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 29   -   size: 35
+move_to_next
+19 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 12   -   size: 35
+move_to_next
+19 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 21   -   size: 35
+move_to_next
+19 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: None   -   size: 35
+move_to_next
+19 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: None   -   size: 35
+move_to_next
+19 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: None   -   size: 35
+move_to_next
+19 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: None   -   size: 35
+remove
+19 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: None   -   size: 35
+remove
+19 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: None   -   size: 35
+remove
+19 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: None   -   size: 35
+remove
+19 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: None   -   size: 35
+remove
+19 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: None   -   size: 35
+remove
+19 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: None   -   size: 35
+remove
+19 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: None   -   size: 35
+remove
+19 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: None   -   size: 35
+remove
+19 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: None   -   size: 35
+remove
+19 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: None   -   size: 35
+remove
+19 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: None   -   size: 35
+move_to_pos 14
+19 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 27   -   size: 35
+move_to_next
+19 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 21   -   size: 35
+move_to_next
+19 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 16   -   size: 35
+move_to_next
+19 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 11   -   size: 35
+move_to_next
+19 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 26   -   size: 35
+move_to_pos 1
+19 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 10   -   size: 35
+insert 24
+19 24 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 24   -   size: 36
+insert 17
+19 17 24 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 17   -   size: 37
+insert 22
+19 22 17 24 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 22   -   size: 38
+insert 15
+19 15 22 17 24 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 15   -   size: 39
+insert 16
+19 16 15 22 17 24 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 16   -   size: 40
+insert 21
+19 21 16 15 22 17 24 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 21   -   size: 41
+insert 19
+19 19 21 16 15 22 17 24 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 19   -   size: 42
+insert 20
+19 20 19 21 16 15 22 17 24 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 20   -   size: 43
+insert 11
+19 11 20 19 21 16 15 22 17 24 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 11   -   size: 44
+insert 14
+19 14 11 20 19 21 16 15 22 17 24 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 14   -   size: 45
+move_to_next
+19 14 11 20 19 21 16 15 22 17 24 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 11   -   size: 45
+move_to_next
+19 14 11 20 19 21 16 15 22 17 24 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 20   -   size: 45
+move_to_next
+19 14 11 20 19 21 16 15 22 17 24 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 19   -   size: 45
+move_to_next
+19 14 11 20 19 21 16 15 22 17 24 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 21   -   size: 45
+move_to_next
+19 14 11 20 19 21 16 15 22 17 24 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 16   -   size: 45
+move_to_next
+19 14 11 20 19 21 16 15 22 17 24 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 15   -   size: 45
+move_to_next
+19 14 11 20 19 21 16 15 22 17 24 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 22   -   size: 45
+move_to_next
+19 14 11 20 19 21 16 15 22 17 24 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 17   -   size: 45
+move_to_next
+19 14 11 20 19 21 16 15 22 17 24 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 24   -   size: 45
+move_to_next
+19 14 11 20 19 21 16 15 22 17 24 10 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 10   -   size: 45
+remove
+19 14 11 20 19 21 16 15 22 17 24 28 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 28   -   size: 44
+remove
+19 14 11 20 19 21 16 15 22 17 24 28 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 28   -   size: 43
+remove
+19 14 11 20 19 21 16 15 22 17 24 28 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 28   -   size: 42
+remove
+19 14 11 20 19 21 16 15 22 17 24 19 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 19   -   size: 41
+remove
+19 14 11 20 19 21 16 15 22 17 24 17 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 17   -   size: 40
+remove
+19 14 11 20 19 21 16 15 22 17 24 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 24   -   size: 39
+move_to_pos 8
+19 14 11 20 19 21 16 15 22 17 24 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 22   -   size: 39
+move_to_prev
+19 14 11 20 19 21 16 15 22 17 24 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 15   -   size: 39
+move_to_prev
+19 14 11 20 19 21 16 15 22 17 24 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 16   -   size: 39
+insert 15
+19 14 11 20 19 21 15 16 15 22 17 24 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 15   -   size: 40
+insert 28
+19 14 11 20 19 21 28 15 16 15 22 17 24 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 28   -   size: 41
+insert 12
+19 14 11 20 19 21 12 28 15 16 15 22 17 24 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 12   -   size: 42
+insert 19
+19 14 11 20 19 21 19 12 28 15 16 15 22 17 24 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 19   -   size: 43
+insert 25
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 17 24 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 25   -   size: 44
+move_to_next
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 17 24 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 19   -   size: 44
+move_to_next
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 17 24 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 12   -   size: 44
+move_to_next
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 17 24 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 28   -   size: 44
+move_to_next
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 17 24 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 15   -   size: 44
+move_to_next
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 17 24 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 16   -   size: 44
+move_to_next
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 17 24 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 15   -   size: 44
+move_to_next
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 17 24 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 22   -   size: 44
+move_to_next
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 17 24 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 17   -   size: 44
+move_to_next
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 17 24 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 24   -   size: 44
+move_to_next
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 17 24 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 24   -   size: 44
+move_to_next
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 17 24 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 22   -   size: 44
+move_to_prev
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 17 24 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 24   -   size: 44
+move_to_prev
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 17 24 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 24   -   size: 44
+move_to_prev
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 17 24 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 17   -   size: 44
+insert 21
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 21 17 24 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 21   -   size: 45
+insert 23
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 23 21 17 24 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 23   -   size: 46
+insert 16
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 16 23 21 17 24 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 16   -   size: 47
+insert 10
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 10 16 23 21 17 24 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 10   -   size: 48
+insert 29
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 29 10 16 23 21 17 24 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 29   -   size: 49
+insert 28
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 28 29 10 16 23 21 17 24 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 28   -   size: 50
+insert 26
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 26 28 29 10 16 23 21 17 24 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 26   -   size: 51
+remove
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 28 29 10 16 23 21 17 24 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 28   -   size: 50
+remove
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 29 10 16 23 21 17 24 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 29   -   size: 49
+remove
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 10 16 23 21 17 24 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 10   -   size: 48
+remove
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 16 23 21 17 24 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 16   -   size: 47
+remove
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 23 21 17 24 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 23   -   size: 46
+remove
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 21 17 24 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 21   -   size: 45
+remove
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 17 24 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 17   -   size: 44
+remove
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 24 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 24   -   size: 43
+remove
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 24 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 24   -   size: 42
+remove
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 22   -   size: 41
+remove
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 17   -   size: 40
+insert 14
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 14 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 14   -   size: 41
+insert 22
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 22 14 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 22   -   size: 42
+insert 12
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 12 22 14 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 12   -   size: 43
+insert 11
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 11 12 22 14 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 11   -   size: 44
+insert 14
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 14 11 12 22 14 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 14   -   size: 45
+insert 16
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 16 14 11 12 22 14 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 16   -   size: 46
+insert 19
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 19 16 14 11 12 22 14 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 19   -   size: 47
+insert 20
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 20 19 16 14 11 12 22 14 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 20   -   size: 48
+move_to_pos 7
+19 14 11 20 19 21 25 19 12 28 15 16 15 22 20 19 16 14 11 12 22 14 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 19   -   size: 48
+remove
+19 14 11 20 19 21 25 12 28 15 16 15 22 20 19 16 14 11 12 22 14 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 12   -   size: 47
+remove
+19 14 11 20 19 21 25 28 15 16 15 22 20 19 16 14 11 12 22 14 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 28   -   size: 46
+remove
+19 14 11 20 19 21 25 15 16 15 22 20 19 16 14 11 12 22 14 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 15   -   size: 45
+remove
+19 14 11 20 19 21 25 16 15 22 20 19 16 14 11 12 22 14 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 16   -   size: 44
+remove
+19 14 11 20 19 21 25 15 22 20 19 16 14 11 12 22 14 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 15   -   size: 43
+remove
+19 14 11 20 19 21 25 22 20 19 16 14 11 12 22 14 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 22   -   size: 42
+remove
+19 14 11 20 19 21 25 20 19 16 14 11 12 22 14 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 20   -   size: 41
+remove
+19 14 11 20 19 21 25 19 16 14 11 12 22 14 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 19   -   size: 40
+remove
+19 14 11 20 19 21 25 16 14 11 12 22 14 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 16   -   size: 39
+remove
+19 14 11 20 19 21 25 14 11 12 22 14 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 14   -   size: 38
+remove
+19 14 11 20 19 21 25 11 12 22 14 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 11   -   size: 37
+remove
+19 14 11 20 19 21 25 12 22 14 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 12   -   size: 36
+remove
+19 14 11 20 19 21 25 22 14 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 22   -   size: 35
+remove
+19 14 11 20 19 21 25 14 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 14   -   size: 34
+remove
+19 14 11 20 19 21 25 17 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 17   -   size: 33
+remove
+19 14 11 20 19 21 25 29 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 29   -   size: 32
+remove
+19 14 11 20 19 21 25 27 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 27   -   size: 31
+remove
+19 14 11 20 19 21 25 28 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 28   -   size: 30
+remove
+19 14 11 20 19 21 25 26 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 26   -   size: 29
+remove
+19 14 11 20 19 21 25 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 27   -   size: 28
+remove
+19 14 11 20 19 21 25 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 21   -   size: 27
+insert 27
+19 14 11 20 19 21 25 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 27   -   size: 28
+insert 27
+19 14 11 20 19 21 25 27 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 27   -   size: 29
+insert 26
+19 14 11 20 19 21 25 26 27 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 26   -   size: 30
+insert 24
+19 14 11 20 19 21 25 24 26 27 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 24   -   size: 31
+insert 24
+19 14 11 20 19 21 25 24 24 26 27 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 24   -   size: 32
+insert 17
+19 14 11 20 19 21 25 17 24 24 26 27 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 17   -   size: 33
+insert 11
+19 14 11 20 19 21 25 11 17 24 24 26 27 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 11   -   size: 34
+insert 14
+19 14 11 20 19 21 25 14 11 17 24 24 26 27 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 14   -   size: 35
+remove
+19 14 11 20 19 21 25 11 17 24 24 26 27 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 11   -   size: 34
+remove
+19 14 11 20 19 21 25 17 24 24 26 27 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 17   -   size: 33
+remove
+19 14 11 20 19 21 25 24 24 26 27 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 24   -   size: 32
+remove
+19 14 11 20 19 21 25 24 26 27 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 24   -   size: 31
+remove
+19 14 11 20 19 21 25 26 27 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 26   -   size: 30
+remove
+19 14 11 20 19 21 25 27 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 27   -   size: 29
+remove
+19 14 11 20 19 21 25 27 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 27   -   size: 28
+remove
+19 14 11 20 19 21 25 21 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 21   -   size: 27
+remove
+19 14 11 20 19 21 25 16 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 16   -   size: 26
+remove
+19 14 11 20 19 21 25 11 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 11   -   size: 25
+remove
+19 14 11 20 19 21 25 26 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 26   -   size: 24
+remove
+19 14 11 20 19 21 25 16 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 16   -   size: 23
+remove
+19 14 11 20 19 21 25 26 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 26   -   size: 22
+remove
+19 14 11 20 19 21 25 24 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 24   -   size: 21
+remove
+19 14 11 20 19 21 25 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 25   -   size: 20
+remove
+19 14 11 20 19 21 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 21   -   size: 19
+move_to_next
+19 14 11 20 19 21 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 28   -   size: 19
+move_to_next
+19 14 11 20 19 21 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 21   -   size: 19
+move_to_pos 1
+19 14 11 20 19 21 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 14   -   size: 19
+remove
+19 11 20 19 21 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 11   -   size: 18
+remove
+19 20 19 21 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 20   -   size: 17
+remove
+19 19 21 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 19   -   size: 16
+remove
+19 21 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 21   -   size: 15
+remove
+19 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 25   -   size: 14
+move_to_prev
+19 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 19   -   size: 14
+move_to_prev
+19 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 19   -   size: 14
+move_to_prev
+19 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 19   -   size: 14
+move_to_prev
+19 25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 19   -   size: 14
+remove
+25 21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 25   -   size: 13
+remove
+21 28 21 11 21 16 10 23 25 29 12 21   -   current value: 21   -   size: 12
+remove
+28 21 11 21 16 10 23 25 29 12 21   -   current value: 28   -   size: 11
+remove
+21 11 21 16 10 23 25 29 12 21   -   current value: 21   -   size: 10
+remove
+11 21 16 10 23 25 29 12 21   -   current value: 11   -   size: 9
+remove
+21 16 10 23 25 29 12 21   -   current value: 21   -   size: 8
+remove
+16 10 23 25 29 12 21   -   current value: 16   -   size: 7
+remove
+10 23 25 29 12 21   -   current value: 10   -   size: 6
+move_to_next
+10 23 25 29 12 21   -   current value: 23   -   size: 6
+remove
+10 25 29 12 21   -   current value: 25   -   size: 5
+remove
+10 29 12 21   -   current value: 29   -   size: 4
+remove
+10 12 21   -   current value: 12   -   size: 3
+remove
+10 21   -   current value: 21   -   size: 2
+remove
+10   -   current value: None   -   size: 1
+remove
+10   -   current value: None   -   size: 1
+remove
+10   -   current value: None   -   size: 1
+remove
+10   -   current value: None   -   size: 1
+remove
+10   -   current value: None   -   size: 1
+remove
+10   -   current value: None   -   size: 1
+remove
+10   -   current value: None   -   size: 1
+remove
+10   -   current value: None   -   size: 1
+remove
+10   -   current value: None   -   size: 1
+move_to_pos -2
+10   -   current value: None   -   size: 1
+insert 11
+10 11   -   current value: 11   -   size: 2
+insert 19
+10 19 11   -   current value: 19   -   size: 3
+insert 23
+10 23 19 11   -   current value: 23   -   size: 4
+insert 22
+10 22 23 19 11   -   current value: 22   -   size: 5
+insert 21
+10 21 22 23 19 11   -   current value: 21   -   size: 6
+insert 15
+10 15 21 22 23 19 11   -   current value: 15   -   size: 7
+move_to_next
+10 15 21 22 23 19 11   -   current value: 21   -   size: 7
+move_to_next
+10 15 21 22 23 19 11   -   current value: 22   -   size: 7
+insert 11
+10 15 21 11 22 23 19 11   -   current value: 11   -   size: 8
+insert 17
+10 15 21 17 11 22 23 19 11   -   current value: 17   -   size: 9
+insert 10
+10 15 21 10 17 11 22 23 19 11   -   current value: 10   -   size: 10
+move_to_prev
+10 15 21 10 17 11 22 23 19 11   -   current value: 21   -   size: 10
+insert 21
+10 15 21 21 10 17 11 22 23 19 11   -   current value: 21   -   size: 11
+insert 26
+10 15 26 21 21 10 17 11 22 23 19 11   -   current value: 26   -   size: 12
+insert 18
+10 15 18 26 21 21 10 17 11 22 23 19 11   -   current value: 18   -   size: 13
+insert 18
+10 15 18 18 26 21 21 10 17 11 22 23 19 11   -   current value: 18   -   size: 14
+move_to_pos 9
+10 15 18 18 26 21 21 10 17 11 22 23 19 11   -   current value: 11   -   size: 14
+insert 18
+10 15 18 18 26 21 21 10 17 18 11 22 23 19 11   -   current value: 18   -   size: 15
+insert 10
+10 15 18 18 26 21 21 10 17 10 18 11 22 23 19 11   -   current value: 10   -   size: 16
+insert 19
+10 15 18 18 26 21 21 10 17 19 10 18 11 22 23 19 11   -   current value: 19   -   size: 17
+insert 21
+10 15 18 18 26 21 21 10 17 21 19 10 18 11 22 23 19 11   -   current value: 21   -   size: 18
+move_to_prev
+10 15 18 18 26 21 21 10 17 21 19 10 18 11 22 23 19 11   -   current value: 17   -   size: 18
+move_to_next
+10 15 18 18 26 21 21 10 17 21 19 10 18 11 22 23 19 11   -   current value: 21   -   size: 18
+move_to_next
+10 15 18 18 26 21 21 10 17 21 19 10 18 11 22 23 19 11   -   current value: 19   -   size: 18
+move_to_next
+10 15 18 18 26 21 21 10 17 21 19 10 18 11 22 23 19 11   -   current value: 10   -   size: 18
+insert 17
+10 15 18 18 26 21 21 10 17 21 19 17 10 18 11 22 23 19 11   -   current value: 17   -   size: 19
+insert 26
+10 15 18 18 26 21 21 10 17 21 19 26 17 10 18 11 22 23 19 11   -   current value: 26   -   size: 20
+insert 24
+10 15 18 18 26 21 21 10 17 21 19 24 26 17 10 18 11 22 23 19 11   -   current value: 24   -   size: 21
+insert 27
+10 15 18 18 26 21 21 10 17 21 19 27 24 26 17 10 18 11 22 23 19 11   -   current value: 27   -   size: 22
+insert 26
+10 15 18 18 26 21 21 10 17 21 19 26 27 24 26 17 10 18 11 22 23 19 11   -   current value: 26   -   size: 23
+insert 26
+10 15 18 18 26 21 21 10 17 21 19 26 26 27 24 26 17 10 18 11 22 23 19 11   -   current value: 26   -   size: 24
+insert 16
+10 15 18 18 26 21 21 10 17 21 19 16 26 26 27 24 26 17 10 18 11 22 23 19 11   -   current value: 16   -   size: 25
+insert 24
+10 15 18 18 26 21 21 10 17 21 19 24 16 26 26 27 24 26 17 10 18 11 22 23 19 11   -   current value: 24   -   size: 26
+move_to_next
+10 15 18 18 26 21 21 10 17 21 19 24 16 26 26 27 24 26 17 10 18 11 22 23 19 11   -   current value: 16   -   size: 26
+move_to_next
+10 15 18 18 26 21 21 10 17 21 19 24 16 26 26 27 24 26 17 10 18 11 22 23 19 11   -   current value: 26   -   size: 26
+move_to_next
+10 15 18 18 26 21 21 10 17 21 19 24 16 26 26 27 24 26 17 10 18 11 22 23 19 11   -   current value: 26   -   size: 26
+move_to_prev
+10 15 18 18 26 21 21 10 17 21 19 24 16 26 26 27 24 26 17 10 18 11 22 23 19 11   -   current value: 26   -   size: 26
+move_to_prev
+10 15 18 18 26 21 21 10 17 21 19 24 16 26 26 27 24 26 17 10 18 11 22 23 19 11   -   current value: 16   -   size: 26
+move_to_prev
+10 15 18 18 26 21 21 10 17 21 19 24 16 26 26 27 24 26 17 10 18 11 22 23 19 11   -   current value: 24   -   size: 26
+move_to_prev
+10 15 18 18 26 21 21 10 17 21 19 24 16 26 26 27 24 26 17 10 18 11 22 23 19 11   -   current value: 19   -   size: 26
+remove
+10 15 18 18 26 21 21 10 17 21 24 16 26 26 27 24 26 17 10 18 11 22 23 19 11   -   current value: 24   -   size: 25
+remove
+10 15 18 18 26 21 21 10 17 21 16 26 26 27 24 26 17 10 18 11 22 23 19 11   -   current value: 16   -   size: 24
+remove
+10 15 18 18 26 21 21 10 17 21 26 26 27 24 26 17 10 18 11 22 23 19 11   -   current value: 26   -   size: 23
+remove
+10 15 18 18 26 21 21 10 17 21 26 27 24 26 17 10 18 11 22 23 19 11   -   current value: 26   -   size: 22
+remove
+10 15 18 18 26 21 21 10 17 21 27 24 26 17 10 18 11 22 23 19 11   -   current value: 27   -   size: 21
+insert 29
+10 15 18 18 26 21 21 10 17 21 29 27 24 26 17 10 18 11 22 23 19 11   -   current value: 29   -   size: 22
+insert 26
+10 15 18 18 26 21 21 10 17 21 26 29 27 24 26 17 10 18 11 22 23 19 11   -   current value: 26   -   size: 23
+insert 16
+10 15 18 18 26 21 21 10 17 21 16 26 29 27 24 26 17 10 18 11 22 23 19 11   -   current value: 16   -   size: 24
+insert 29
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 22 23 19 11   -   current value: 29   -   size: 25
+move_to_next
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 22 23 19 11   -   current value: 16   -   size: 25
+move_to_next
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 22 23 19 11   -   current value: 26   -   size: 25
+move_to_next
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 22 23 19 11   -   current value: 29   -   size: 25
+move_to_next
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 22 23 19 11   -   current value: 27   -   size: 25
+move_to_next
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 22 23 19 11   -   current value: 24   -   size: 25
+move_to_next
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 22 23 19 11   -   current value: 26   -   size: 25
+move_to_next
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 22 23 19 11   -   current value: 17   -   size: 25
+move_to_next
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 22 23 19 11   -   current value: 10   -   size: 25
+move_to_next
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 22 23 19 11   -   current value: 18   -   size: 25
+move_to_next
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 22 23 19 11   -   current value: 11   -   size: 25
+move_to_next
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 22 23 19 11   -   current value: 22   -   size: 25
+insert 25
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 25 22 23 19 11   -   current value: 25   -   size: 26
+insert 18
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 18 25 22 23 19 11   -   current value: 18   -   size: 27
+insert 15
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 15 18 25 22 23 19 11   -   current value: 15   -   size: 28
+insert 29
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 29 15 18 25 22 23 19 11   -   current value: 29   -   size: 29
+insert 24
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 24 29 15 18 25 22 23 19 11   -   current value: 24   -   size: 30
+insert 21
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 21 24 29 15 18 25 22 23 19 11   -   current value: 21   -   size: 31
+insert 24
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 24 21 24 29 15 18 25 22 23 19 11   -   current value: 24   -   size: 32
+insert 17
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 17 24 21 24 29 15 18 25 22 23 19 11   -   current value: 17   -   size: 33
+insert 29
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 29 17 24 21 24 29 15 18 25 22 23 19 11   -   current value: 29   -   size: 34
+insert 17
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 17 29 17 24 21 24 29 15 18 25 22 23 19 11   -   current value: 17   -   size: 35
+insert 21
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 21 17 29 17 24 21 24 29 15 18 25 22 23 19 11   -   current value: 21   -   size: 36
+insert 26
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 26 21 17 29 17 24 21 24 29 15 18 25 22 23 19 11   -   current value: 26   -   size: 37
+insert 23
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 23 26 21 17 29 17 24 21 24 29 15 18 25 22 23 19 11   -   current value: 23   -   size: 38
+remove
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 26 21 17 29 17 24 21 24 29 15 18 25 22 23 19 11   -   current value: 26   -   size: 37
+remove
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 21 17 29 17 24 21 24 29 15 18 25 22 23 19 11   -   current value: 21   -   size: 36
+remove
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 17 29 17 24 21 24 29 15 18 25 22 23 19 11   -   current value: 17   -   size: 35
+remove
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 29 17 24 21 24 29 15 18 25 22 23 19 11   -   current value: 29   -   size: 34
+remove
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 17 24 21 24 29 15 18 25 22 23 19 11   -   current value: 17   -   size: 33
+insert 15
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 15 17 24 21 24 29 15 18 25 22 23 19 11   -   current value: 15   -   size: 34
+insert 23
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 23 15 17 24 21 24 29 15 18 25 22 23 19 11   -   current value: 23   -   size: 35
+insert 16
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 16 23 15 17 24 21 24 29 15 18 25 22 23 19 11   -   current value: 16   -   size: 36
+insert 20
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 20 16 23 15 17 24 21 24 29 15 18 25 22 23 19 11   -   current value: 20   -   size: 37
+insert 19
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 19 20 16 23 15 17 24 21 24 29 15 18 25 22 23 19 11   -   current value: 19   -   size: 38
+insert 21
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 21 19 20 16 23 15 17 24 21 24 29 15 18 25 22 23 19 11   -   current value: 21   -   size: 39
+remove
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 19 20 16 23 15 17 24 21 24 29 15 18 25 22 23 19 11   -   current value: 19   -   size: 38
+remove
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 20 16 23 15 17 24 21 24 29 15 18 25 22 23 19 11   -   current value: 20   -   size: 37
+remove
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 16 23 15 17 24 21 24 29 15 18 25 22 23 19 11   -   current value: 16   -   size: 36
+remove
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 23 15 17 24 21 24 29 15 18 25 22 23 19 11   -   current value: 23   -   size: 35
+remove
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 15 17 24 21 24 29 15 18 25 22 23 19 11   -   current value: 15   -   size: 34
+remove
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 17 24 21 24 29 15 18 25 22 23 19 11   -   current value: 17   -   size: 33
+remove
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 24 21 24 29 15 18 25 22 23 19 11   -   current value: 24   -   size: 32
+remove
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 21 24 29 15 18 25 22 23 19 11   -   current value: 21   -   size: 31
+remove
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 24 29 15 18 25 22 23 19 11   -   current value: 24   -   size: 30
+remove
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 29 15 18 25 22 23 19 11   -   current value: 29   -   size: 29
+remove
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 15 18 25 22 23 19 11   -   current value: 15   -   size: 28
+remove
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 18 25 22 23 19 11   -   current value: 18   -   size: 27
+remove
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 25 22 23 19 11   -   current value: 25   -   size: 26
+remove
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 22 23 19 11   -   current value: 22   -   size: 25
+remove
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 23 19 11   -   current value: 23   -   size: 24
+remove
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 19 11   -   current value: 19   -   size: 23
+remove
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11 11   -   current value: 11   -   size: 22
+remove
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11   -   current value: None   -   size: 21
+move_to_next
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11   -   current value: 10   -   size: 21
+move_to_next
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11   -   current value: 15   -   size: 21
+move_to_next
+10 15 18 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11   -   current value: 18   -   size: 21
+remove
+10 15 18 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11   -   current value: 18   -   size: 20
+remove
+10 15 26 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11   -   current value: 26   -   size: 19
+remove
+10 15 21 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11   -   current value: 21   -   size: 18
+remove
+10 15 21 10 17 21 29 16 26 29 27 24 26 17 10 18 11   -   current value: 21   -   size: 17
+remove
+10 15 10 17 21 29 16 26 29 27 24 26 17 10 18 11   -   current value: 10   -   size: 16
+remove
+10 15 17 21 29 16 26 29 27 24 26 17 10 18 11   -   current value: 17   -   size: 15
+remove
+10 15 21 29 16 26 29 27 24 26 17 10 18 11   -   current value: 21   -   size: 14
+remove
+10 15 29 16 26 29 27 24 26 17 10 18 11   -   current value: 29   -   size: 13
+remove
+10 15 16 26 29 27 24 26 17 10 18 11   -   current value: 16   -   size: 12
+remove
+10 15 26 29 27 24 26 17 10 18 11   -   current value: 26   -   size: 11
+remove
+10 15 29 27 24 26 17 10 18 11   -   current value: 29   -   size: 10
+move_to_pos 10
+10 15 29 27 24 26 17 10 18 11   -   current value: 29   -   size: 10
+remove
+10 15 27 24 26 17 10 18 11   -   current value: 27   -   size: 9
+insert 18
+10 15 18 27 24 26 17 10 18 11   -   current value: 18   -   size: 10
+insert 16
+10 15 16 18 27 24 26 17 10 18 11   -   current value: 16   -   size: 11
+insert 24
+10 15 24 16 18 27 24 26 17 10 18 11   -   current value: 24   -   size: 12
+move_to_next
+10 15 24 16 18 27 24 26 17 10 18 11   -   current value: 16   -   size: 12
+move_to_next
+10 15 24 16 18 27 24 26 17 10 18 11   -   current value: 18   -   size: 12
+move_to_pos 5

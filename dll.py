@@ -1,3 +1,7 @@
+import random
+import sys
+sys.setrecursionlimit(9999)
+
 
 class Node():
     def __init__(self):
@@ -65,12 +69,14 @@ class DLL:
         new_node.set_data(value)
 
         new_node.set_next(self.current_node, self.rev_toggle)
-        new_node.set_prev(self.current_node.get_prev(self.rev_toggle), self.rev_toggle)
+        new_node.set_prev(self.current_node.get_prev(
+            self.rev_toggle), self.rev_toggle)
 
-        self.current_node.get_prev(self.rev_toggle).set_next(new_node, self.rev_toggle)
+        self.current_node.get_prev(self.rev_toggle).set_next(
+            new_node, self.rev_toggle)
         self.current_node.set_prev(new_node, self.rev_toggle)
 
-        if self.current_position == "Tail": # to make sure the current position is changed to the end of the list
+        if self.current_position == "Tail":  # to make sure the current position is changed to the end of the list
             self.current_position = self.size-1
 
         self.current_node = new_node
@@ -104,7 +110,6 @@ class DLL:
             else:
                 self.current_position += 1
                 self.current_node = self.current_node.get_next(self.rev_toggle)
-                
 
     def move_to_prev(self):
         if self.current_position == "Tail":
@@ -115,11 +120,11 @@ class DLL:
             self.current_position -= 1
             self.current_node = self.current_node.get_prev(self.rev_toggle)
 
-
     def move_to_pos(self, position):
         if 0 <= position <= self.size-1:
-            if type(self.current_position).__name__ == "str": # for when current position is self.sentinel
-                if position >= self.size/2: # finds out which way is fastest
+            # for when current position is self.sentinel
+            if type(self.current_position).__name__ == "str":
+                if position >= self.size/2:  # finds out which way is fastest
                     self.current_position = self.size-1
                 else:
                     self.current_position = 0
@@ -153,7 +158,8 @@ class DLL:
                 if selected_node == self.current_node:
                     current_removed = True
                 if self.current_position > selected_position:
-                    self.current_node = self.current_node.get_next(self.rev_toggle)
+                    self.current_node = self.current_node.get_next(
+                        self.rev_toggle)
                 self.remove(selected_node, True)
         if current_removed:
             self.current_node = self.sentinel.get_next(self.rev_toggle)
@@ -164,62 +170,131 @@ class DLL:
         self.current_position = 0
         self.current_node = self.sentinel.get_next(self.rev_toggle)
 
-    def sort(self, selected_node=None):
+    def sort(self):
 
         self.rev_toggle = False
-        selected_node = self.sentinel.get_next(self.rev_toggle)
+        tempNode = self.mergeSort(self.sentinel.get_next(self.rev_toggle))
+        tempNode.set_prev(self.sentinel, self.rev_toggle)
+        self.sentinel.set_next(tempNode, self.rev_toggle)
+
+        print()
+
+    def mergeSort(self, left):
+
+        if left == None or left.get_next(self.rev_toggle) == None:
+            return left
+
+        right = self.split(left)
+
+        left = self.mergeSort(left)
+        right = self.mergeSort(right)
+
+        val = self.merge(left, right)
+        return val
+
+    def split(self, head):
+
+        runner = head
+        middle = head
+
         while True:
-            self.__swap(selected_node)
+            if runner.get_next(self.rev_toggle) == None:
+                break
+            if runner.get_next(self.rev_toggle).get_next(self.rev_toggle) == None:
+                break
+            if runner.get_next(self.rev_toggle).get_data() == None:
+                break
+            if runner.get_next(self.rev_toggle).get_next(self.rev_toggle).get_data() == None:
+                break
 
-            selected_node = selected_node.get_next(self.rev_toggle)
-            if selected_node.get_data() == None:
-                self.current_position = 0
-                self.current_node = self.sentinel.get_next(self.rev_toggle)
-                return
+            runner = runner.get_next(self.rev_toggle).get_next(self.rev_toggle)
+            middle = middle.get_next(self.rev_toggle)
 
-        self.rev_toggle = False
-        if selected_node == None:
-            selected_node = self.sentinel.get_next(self.rev_toggle).get_next(self.rev_toggle)
+        temp = middle.get_next(self.rev_toggle)
+        middle.set_next(None, self.rev_toggle)
 
-        self.__swap(selected_node)
+        return temp
 
-        if type(selected_node.get_next(self.rev_toggle).get_data()).__name__ != 'NoneType':
-            self.sort(selected_node.get_next(self.rev_toggle))
-        
+    def merge(self, first, second):
 
+        if first == None:
+            second.set_next(self.sentinel, self.rev_toggle)
+            return second
 
-    # def split(self, head=None):
-    #     if head == None:
-    #         head = self.sentinel.get_next(self.rev_toggle)
+        if second == None:
+            first.set_next(self.sentinel, self.rev_toggle)
+            return first
 
-    #     if head.get_next(self.rev_toggle):
-    #         return
+        if first.get_data() == None:  # edge case for the sentinel
+            return second
 
-    #     runner = head
-    #     walker = head
+        if second.get_data() == None:
+            return first
 
-    #     while runner.get_next(self.rev_toggle) != None:
-    #         runner = runner.get_next(self.rev_toggle).get_next(self.rev_toggle)
-    #         walker = walker.get_next(self.rev_toggle)
-    #     walker
-    #     self.split(head)
-    #     self.split(walker)
+        firstVal = first.get_data()
+        secondVal = second.get_data()
 
-    def __swap(self, selected_node):
-        if type(selected_node.get_prev(self.rev_toggle).get_data()).__name__ != 'NoneType':
+        if firstVal < secondVal:
+            first.set_next(self.merge(first.get_next(
+                self.rev_toggle), second), self.rev_toggle)
+            first.get_next(self.rev_toggle).set_prev(first, self.rev_toggle)
+            first.set_prev(None, self.rev_toggle)
 
-            if selected_node.get_data() < selected_node.get_prev(self.rev_toggle).get_data():
-                next_node = selected_node.get_next(self.rev_toggle)
-                prev_node = selected_node.get_prev(self.rev_toggle)
+            if first.get_next(self.rev_toggle) == first:
+                first.set_next(self.sentinel, self.rev_toggle)
+                self.sentinel.set_prev(first, self.rev_toggle)
+                
+            return first
 
-                selected_node.get_next(self.rev_toggle).set_prev(prev_node, self.rev_toggle)
-                selected_node.get_prev(self.rev_toggle).set_next(next_node, self.rev_toggle)
-                selected_node.set_prev(prev_node.get_prev(self.rev_toggle), self.rev_toggle)
-                prev_node.get_prev(self.rev_toggle).set_next(selected_node, self.rev_toggle)
-                prev_node.set_prev(selected_node, self.rev_toggle)
-                selected_node.set_next(prev_node, self.rev_toggle)
+        else:
+            second.set_next(self.merge(first, second.get_next(
+                self.rev_toggle)), self.rev_toggle)
+            second.get_next(self.rev_toggle).set_prev(second, self.rev_toggle)
+            second.set_prev(None, self.rev_toggle)
 
-                self.__swap(selected_node)
+            if second.get_next(self.rev_toggle) == second:
+                second.set_next(self.sentinel, self.rev_toggle)
+                self.sentinel.set_prev(second, self.rev_toggle)
+
+            return second
+
+    # def sort(self, selected_node=None):
+
+    #     self.rev_toggle = False
+    #     selected_node = self.sentinel.get_next(self.rev_toggle)
+    #     while True:
+    #         self.__swap(selected_node)
+
+    #         selected_node = selected_node.get_next(self.rev_toggle)
+    #         if selected_node.get_data() == None:
+    #             self.current_position = 0
+    #             self.current_node = self.sentinel.get_next(self.rev_toggle)
+    #             return
+
+    #     self.rev_toggle = False
+    #     if selected_node == None:
+    #         selected_node = self.sentinel.get_next(self.rev_toggle).get_next(self.rev_toggle)
+
+    #     self.__swap(selected_node)
+
+    #     if type(selected_node.get_next(self.rev_toggle).get_data()).__name__ != 'NoneType':
+    #         self.sort(selected_node.get_next(self.rev_toggle))
+
+    # def __swap(self, selected_node):
+    #     if type(selected_node.get_prev(self.rev_toggle).get_data()).__name__ != 'NoneType':
+
+    #         if selected_node.get_data() < selected_node.get_prev(self.rev_toggle).get_data():
+    #             next_node = selected_node.get_next(self.rev_toggle)
+    #             prev_node = selected_node.get_prev(self.rev_toggle)
+
+    #             selected_node.get_next(self.rev_toggle).set_prev(prev_node, self.rev_toggle)
+    #             selected_node.get_prev(self.rev_toggle).set_next(next_node, self.rev_toggle)
+    #             selected_node.set_prev(prev_node.get_prev(self.rev_toggle), self.rev_toggle)
+    #             prev_node.get_prev(self.rev_toggle).set_next(selected_node, self.rev_toggle)
+    #             prev_node.set_prev(selected_node, self.rev_toggle)
+    #             selected_node.set_next(prev_node, self.rev_toggle)
+
+    #             self.__swap(selected_node)
 
     def __move_left(self, gap, counter=1):
         if counter == gap:
@@ -237,15 +312,29 @@ class DLL:
 
 
 newLinkedList = DLL()
+# for i in range(10):
+#     newLinkedList.insert(random.randint(1, 50))
 
-for i in range(5):
-    newLinkedList.insert(i)
+newLinkedList.insert(1)
+newLinkedList.insert(4)
+newLinkedList.insert(2)
+newLinkedList.insert(4)
+newLinkedList.insert(3)
+newLinkedList.insert(5)
+newLinkedList.insert(5)
+newLinkedList.insert(5)
+newLinkedList.insert(444)
+newLinkedList.insert(5)
+newLinkedList.insert(18)
+
+
+print(newLinkedList)
 newLinkedList.sort()
+print(newLinkedList)
 
-
-newLinkedList.move_to_prev()
-newLinkedList.insert("blablíblúbla")
-print(newLinkedList.get_value())
+# newLinkedList.move_to_prev()
+# newLinkedList.insert("blablíblúbla")
+# print(newLinkedList.get_value())
 # for i in range(12,0,-1):
 #     newLinkedList.insert(i)
 
