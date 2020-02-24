@@ -159,7 +159,6 @@ def main():
     
     sys.stdout = orig_stdout
     fout.close()
-    print("done")
 
 if __name__ == "__main__":
     
